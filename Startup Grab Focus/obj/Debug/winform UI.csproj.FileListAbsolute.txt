@@ -1,0 +1,3 @@
+C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.exe.config
+C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.exe
+C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.pdb
