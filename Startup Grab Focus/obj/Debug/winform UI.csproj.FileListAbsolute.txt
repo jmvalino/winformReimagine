@@ -1,3 +1,12 @@
 C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.exe.config
 C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.exe
 C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.pdb
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.exe
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.pdb
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\winform UI.csprojResolveAssemblyReference.cache
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.App.resources
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.Properties.Resources.resources
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\winform UI.csproj.GenerateResource.Cache
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.ucHelp.resources
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.ucHome.resources
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.About.resources

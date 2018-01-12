@@ -37,5 +37,31 @@ namespace Startup_Grab_Focus
         {
 
         }
+
+        private void tsmiHelp_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.StartPosition = FormStartPosition.CenterParent;
+            about.ShowDialog();
+            //myPanel1.Controls.Add(userControl1)
+            //tsmiHelp.Font = new Font(tsmiHelp.Font, FontStyle.Bold); ;
+            //this.panelViewContainer.Controls.Clear();
+            //ucHelp help_view = new ucHelp();
+            //panelViewContainer.Controls.Add(help_view);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.panelViewContainer.Controls.Clear();
+            ucHome home_view = new ucHome();
+            home_view.PerformAutoScale();
+            panelViewContainer.Controls.Add(home_view);
+           // home_view.Dispose();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
