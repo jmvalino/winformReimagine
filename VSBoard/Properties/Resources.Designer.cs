@@ -83,6 +83,16 @@ namespace VSBoard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desktop_github_com {
+            get {
+                object obj = ResourceManager.GetObject("desktop_github_com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap human {
             get {
                 object obj = ResourceManager.GetObject("human", resourceCulture);

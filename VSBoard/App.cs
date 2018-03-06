@@ -114,5 +114,26 @@ namespace VSBoard
         {
             showMahours();
         }
+
+        private void jToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showProjects();
+        }
+
+        private void lblBoardname_Click(object sender, EventArgs e)
+        {
+            Maintainance.Maintain mn = new Maintainance.Maintain();
+            mn.Show();
+        }
+
+        private void manToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showMahours();
+        }
+
+        private void annToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showAnnouncements();
+        }
     }
 }

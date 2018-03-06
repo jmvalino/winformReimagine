@@ -32,8 +32,8 @@
             this.timerT = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             this.lblTime = new System.Windows.Forms.Label();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,10 +51,10 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.619048F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.38095F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 458F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 460F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroProgressSpinner1, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblTime, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroProgressSpinner1, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
@@ -78,32 +78,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Design && Development Group";
             // 
-            // metroProgressSpinner1
-            // 
-            this.metroProgressSpinner1.BackColor = System.Drawing.SystemColors.Control;
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(262, 125);
-            this.metroProgressSpinner1.Maximum = 100;
-            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
-            this.metroProgressSpinner1.Size = new System.Drawing.Size(190, 190);
-            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Pink;
-            this.metroProgressSpinner1.TabIndex = 1;
-            // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 100F);
             this.lblTime.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblTime.Location = new System.Drawing.Point(262, 0);
+            this.lblTime.Location = new System.Drawing.Point(260, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(438, 122);
             this.lblTime.TabIndex = 2;
             this.lblTime.Text = "#DDG";
+            // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.BackColor = System.Drawing.SystemColors.Control;
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(260, 125);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(221, 190);
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Pink;
+            this.metroProgressSpinner1.TabIndex = 1;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = global::VSBoard.Properties.Resources.desktop_github_com;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(718, 423);

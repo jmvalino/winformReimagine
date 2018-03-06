@@ -44,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +62,31 @@
     </Compile>
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbConnector.cs" />
+    <Compile Include="Maintainance\Maintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Maintain.Designer.cs">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintainance\Views\Announcements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Announcements.Designer.cs">
+      <DependentUpon>Announcements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintainance\Views\Manhours.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Manhours.Designer.cs">
+      <DependentUpon>Manhours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintainance\Views\Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Projects.Designer.cs">
+      <DependentUpon>Projects.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +122,12 @@
     </Compile>
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Maintain.resx">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Views\Manhours.resx">
+      <DependentUpon>Manhours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +171,7 @@
   <ItemGroup>
     <Content Include="Assets\circuit-board.png" />
     <Content Include="Assets\cube-outline.png" />
+    <Content Include="Assets\desktop_github_com.png" />
     <Content Include="Assets\human.png" />
     <Content Include="Assets\message.png" />
     <Content Include="Assets\pattern.png" />
@@ -145,6 +180,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

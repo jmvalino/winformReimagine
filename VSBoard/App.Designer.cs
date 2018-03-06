@@ -37,7 +37,7 @@
             this.panelHolder = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanelCtr = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblBoardname = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.annToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +51,6 @@
             // 
             // timerTicker
             // 
-            this.timerTicker.Enabled = true;
             this.timerTicker.Interval = 1000;
             this.timerTicker.Tick += new System.EventHandler(this.timerTicker_Tick);
             // 
@@ -117,7 +116,7 @@
             this.tableLayoutPanelCtr.ColumnCount = 2;
             this.tableLayoutPanelCtr.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.71508F));
             this.tableLayoutPanelCtr.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.28492F));
-            this.tableLayoutPanelCtr.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanelCtr.Controls.Add(this.lblBoardname, 1, 0);
             this.tableLayoutPanelCtr.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanelCtr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelCtr.Location = new System.Drawing.Point(0, 0);
@@ -126,18 +125,18 @@
             this.tableLayoutPanelCtr.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelCtr.Size = new System.Drawing.Size(895, 60);
             this.tableLayoutPanelCtr.TabIndex = 0;
-            this.tableLayoutPanelCtr.Visible = false;
             // 
-            // label1
+            // lblBoardname
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(569, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "design && development group";
+            this.lblBoardname.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblBoardname.AutoSize = true;
+            this.lblBoardname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBoardname.Location = new System.Drawing.Point(569, 15);
+            this.lblBoardname.Name = "lblBoardname";
+            this.lblBoardname.Size = new System.Drawing.Size(323, 29);
+            this.lblBoardname.TabIndex = 0;
+            this.lblBoardname.Text = "design && development group";
+            this.lblBoardname.Click += new System.EventHandler(this.lblBoardname_Click);
             // 
             // menuStrip1
             // 
@@ -148,7 +147,7 @@
             this.jToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(257, 58);
+            this.menuStrip1.Size = new System.Drawing.Size(256, 58);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,6 +159,7 @@
             this.annToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.annToolStripMenuItem.Name = "annToolStripMenuItem";
             this.annToolStripMenuItem.Size = new System.Drawing.Size(62, 54);
+            this.annToolStripMenuItem.Click += new System.EventHandler(this.annToolStripMenuItem_Click);
             // 
             // manToolStripMenuItem
             // 
@@ -167,6 +167,7 @@
             this.manToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manToolStripMenuItem.Name = "manToolStripMenuItem";
             this.manToolStripMenuItem.Size = new System.Drawing.Size(62, 54);
+            this.manToolStripMenuItem.Click += new System.EventHandler(this.manToolStripMenuItem_Click);
             // 
             // jToolStripMenuItem
             // 
@@ -174,6 +175,7 @@
             this.jToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.jToolStripMenuItem.Name = "jToolStripMenuItem";
             this.jToolStripMenuItem.Size = new System.Drawing.Size(62, 54);
+            this.jToolStripMenuItem.Click += new System.EventHandler(this.jToolStripMenuItem_Click);
             // 
             // App
             // 
@@ -210,7 +212,7 @@
         private MetroFramework.Controls.MetroPanel panelHolder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCtr;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBoardname;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem annToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manToolStripMenuItem;
