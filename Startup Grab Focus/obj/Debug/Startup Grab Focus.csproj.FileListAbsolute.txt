@@ -1,9 +1,0 @@
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.exe.config
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.exe
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\bin\Debug\Startup Grab Focus.pdb
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.csprojResolveAssemblyReference.cache
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.Properties.Resources.resources
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.csproj.GenerateResource.Cache
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.exe
-c:\users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup Grab Focus.pdb
-C:\Users\jmval\documents\visual studio 2013\Projects\Startup Grab Focus\Startup Grab Focus\obj\Debug\Startup_Grab_Focus.App.resources

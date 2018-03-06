@@ -1,0 +1,16 @@
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\bin\Debug\VSBoard.exe.config
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\bin\Debug\VSBoard.exe
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\bin\Debug\VSBoard.pdb
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.csprojResolveAssemblyReference.cache
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.App.resources
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Properties.Resources.resources
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.csproj.GenerateResource.Cache
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.exe
+c:\users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.pdb
+C:\Users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Views.Home.resources
+C:\Users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\bin\Debug\MetroFramework.dll
+C:\Users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Views.MMV.resources
+C:\Users\jmval\Documents\Visual Studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Views.Projects.resources
+C:\Users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Views.Manhours.resources
+C:\Users\jmval\documents\visual studio 2013\Projects\VSBoard\VSBoard\obj\Debug\VSBoard.Views.Announcements.resources
