@@ -48,7 +48,7 @@ namespace VSBoard.Views
 
         private void timerT_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToLocalTime().ToShortTimeString();
+            //lblTime.Text = DateTime.Now.ToLocalTime().ToShortTimeString();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

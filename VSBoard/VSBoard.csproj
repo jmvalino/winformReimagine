@@ -126,6 +126,9 @@
     <EmbeddedResource Include="Maintainance\Maintain.resx">
       <DependentUpon>Maintain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Views\Announcements.resx">
+      <DependentUpon>Announcements.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintainance\Views\Manhours.resx">
       <DependentUpon>Manhours.cs</DependentUpon>
     </EmbeddedResource>

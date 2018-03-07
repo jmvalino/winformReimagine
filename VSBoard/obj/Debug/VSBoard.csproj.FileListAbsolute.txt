@@ -32,3 +32,22 @@ C:\Users\JM VALINO\Downloads\winformReimagine-master\VSBoard\obj\Debug\VSBoard.V
 C:\Users\JM VALINO\Downloads\winformReimagine-master\VSBoard\obj\Debug\VSBoard.csproj.GenerateResource.Cache
 C:\Users\JM VALINO\Downloads\winformReimagine-master\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Manhours.resources
 C:\Users\JM VALINO\Downloads\winformReimagine-master\VSBoard\obj\Debug\VSBoard.Maintainance.Maintain.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\VSBoard.exe.config
+C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\VSBoard.exe
+C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\VSBoard.pdb
+C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\MetroFramework.dll
+C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.App.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Maintain.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Announcements.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Manhours.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Properties.Resources.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Announcements.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Home.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Manhours.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.MMV.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Projects.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.csproj.GenerateResource.Cache
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.exe
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.pdb
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.csprojResolveAssemblyReference.cache

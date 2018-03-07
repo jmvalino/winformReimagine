@@ -15,6 +15,7 @@ namespace VSBoard.Maintainance.Views
         public Announcements()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
     }
 }

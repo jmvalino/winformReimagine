@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.Windows.Forms.Design;
 
 namespace VSBoard
 {
@@ -17,6 +18,14 @@ namespace VSBoard
         public App()
         {
             InitializeComponent();
+            panelButtom.Dock = DockStyle.Fill;
+            showHome();
+        }
+        void clearBColors()
+        {
+            projectsToolStripMenuItem.BackColor = Color.Transparent;
+            manhoursToolStripMenuItem.BackColor = Color.Transparent;
+            jToolStripMenuItem.BackColor = Color.Transparent;
         }
 
         private void timerTicker_Tick(object sender, EventArgs e)
@@ -24,31 +33,37 @@ namespace VSBoard
 
             i++;
 
-           //btnTime.Text = DateTime.Now.ToShortTimeString();
+           lblTime.Text = DateTime.Now.ToShortTimeString();
             if (i == 1)
             {
-                this.panelHolder.Controls.Clear();
-                Views.Home home = new Views.Home();
-                home.PerformAutoScale();
-                panelHolder.Controls.Add(home);
-                tableLayoutPanelCtr.Visible = false;
+
+               
+                showProjects();
+                
+              //  menuStripMain.Items.
+                 //projectsToolStripMenuItem.BackColor = Color.FromArgb(255, 232, 232);
+                //this.panelHolder.Controls.Clear();
+                //Views.Home home = new Views.Home();
+                //home.PerformAutoScale();
+                //panelHolder.Controls.Add(home);
+                //tableLayoutPanelCtr.Visible = false;
 
             }
             if (i == 14)
             {
-                tableLayoutPanelCtr.Visible = true;
-                this.panelHolder.Controls.Clear();
-                Views.MMV mmv = new Views.MMV();
-                mmv.PerformAutoScale();
-                panelHolder.Controls.Add(mmv);
+                
+                showMahours();
+                //tableLayoutPanelCtr.Visible = true;
+                //this.panelHolder.Controls.Clear();
+                //Views.MMV mmv = new Views.MMV();
+                //mmv.PerformAutoScale();
+                //panelHolder.Controls.Add(mmv);
 
             }
             if (i == 21)
             {
-                this.panelHolder.Controls.Clear();
-                Views.Projects proj = new Views.Projects();
-                proj.PerformAutoScale();
-                panelHolder.Controls.Add(proj);
+                
+                showAnnouncements();
 
             }
             if (i == 30)
@@ -62,26 +77,47 @@ namespace VSBoard
         }
         ///uc show functions///
 
+        void showHome()
+        {
+            clearBColors();
+            panelButtom.Dock = DockStyle.Bottom;
+           // jToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
+           this.panelHolder.Controls.Clear();
+            Views.Home home = new Views.Home();
+            home.PerformAutoScale();
+            panelHolder.Controls.Add(home);
+
+        }
+
+
         void showProjects()
         {
-            this.panelHolder.Controls.Clear();
+            clearBColors();
+            projectsToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
+           this.panelHolder.Controls.Clear();
             Views.Projects proj = new Views.Projects();
             proj.PerformAutoScale();
-            panelHolder.Controls.Add(proj);
+      panelHolder.Controls.Add(proj);
 
         }
 
         void showMahours()
         {
-            this.panelHolder.Controls.Clear();
+            clearBColors();
+            //manToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
+            manhoursToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
+          this.panelHolder.Controls.Clear();
             Views.Manhours man = new Views.Manhours();
             man.PerformAutoScale();
-            panelHolder.Controls.Add(man);
+           panelHolder.Controls.Add(man);
 
         }
 
         void showAnnouncements()
         {
+            clearBColors();
+            jToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
+            //annToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
             this.panelHolder.Controls.Clear();
             Views.Announcements ann = new Views.Announcements();
             ann.PerformAutoScale();
@@ -122,8 +158,9 @@ namespace VSBoard
 
         private void lblBoardname_Click(object sender, EventArgs e)
         {
-            Maintainance.Maintain mn = new Maintainance.Maintain();
-            mn.Show();
+            this.Close();
+            //Maintainance.Maintain mn = new Maintainance.Maintain();
+            //mn.Show();
         }
 
         private void manToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,6 +169,21 @@ namespace VSBoard
         }
 
         private void annToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showAnnouncements();
+        }
+
+        private void projectsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            showProjects();
+        }
+
+        private void manhoursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            showMahours();
+        }
+
+        private void jToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             showAnnouncements();
         }
