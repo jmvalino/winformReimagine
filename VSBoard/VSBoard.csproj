@@ -63,7 +63,19 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
+    <Compile Include="BoardMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardMDI.Designer.cs">
+      <DependentUpon>BoardMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbConnector.cs" />
+    <Compile Include="MainAPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAPP.Designer.cs">
+      <DependentUpon>MainAPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintainance\Maintain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,17 +108,35 @@
     <Compile Include="Views\Announcements.Designer.cs">
       <DependentUpon>Announcements.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Home.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Views\frmHome.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Views\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmManhours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmManhours.Designer.cs">
+      <DependentUpon>frmManhours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmProjects.Designer.cs">
+      <DependentUpon>frmProjects.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Manhours.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Manhours.Designer.cs">
       <DependentUpon>Manhours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Misc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Misc.Designer.cs">
+      <DependentUpon>Misc.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MMV.cs">
       <SubType>UserControl</SubType>
@@ -122,6 +152,12 @@
     </Compile>
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardMDI.resx">
+      <DependentUpon>BoardMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAPP.resx">
+      <DependentUpon>MainAPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintainance\Maintain.resx">
       <DependentUpon>Maintain.cs</DependentUpon>
@@ -145,11 +181,20 @@
     <EmbeddedResource Include="Views\Announcements.resx">
       <DependentUpon>Announcements.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmManhours.resx">
+      <DependentUpon>frmManhours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmProjects.resx">
+      <DependentUpon>frmProjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Manhours.resx">
       <DependentUpon>Manhours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Misc.resx">
+      <DependentUpon>Misc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MMV.resx">
       <DependentUpon>MMV.cs</DependentUpon>
@@ -176,9 +221,11 @@
     <Content Include="Assets\cube-outline.png" />
     <Content Include="Assets\desktop_github_com.png" />
     <Content Include="Assets\human.png" />
+    <Content Include="Assets\Ionics%27 Core Values.JPG" />
     <Content Include="Assets\message.png" />
+    <Content Include="Assets\mvv.png" />
     <Content Include="Assets\pattern.png" />
-    <Content Include="MetroFramework.txt" />
+    <Content Include="Assets\prime.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

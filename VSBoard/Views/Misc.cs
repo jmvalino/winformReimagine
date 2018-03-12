@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VSBoard.Maintainance.Views
+namespace VSBoard.Views
 {
-    public partial class Interstitial : UserControl
+    public partial class Misc : UserControl
     {
-        public Interstitial()
+        public Misc()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
+        }
+
+        private void Misc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

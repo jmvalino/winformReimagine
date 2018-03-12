@@ -38,7 +38,7 @@
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Deliverables = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.d = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewTasks = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblStat = new System.Windows.Forms.Label();
@@ -50,12 +50,12 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.lblProjName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listViewDeliverables, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listView2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.listViewTasks, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.chart1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblStat, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,11 +73,11 @@
             // 
             this.lblProjName.AutoSize = true;
             this.lblProjName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblProjName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProjName.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProjName.Location = new System.Drawing.Point(3, 0);
             this.lblProjName.Name = "lblProjName";
-            this.lblProjName.Size = new System.Drawing.Size(267, 45);
+            this.lblProjName.Size = new System.Drawing.Size(282, 45);
             this.lblProjName.TabIndex = 0;
             // 
             // listViewDeliverables
@@ -94,7 +94,7 @@
             this.listViewDeliverables.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewDeliverables.Location = new System.Drawing.Point(3, 48);
             this.listViewDeliverables.Name = "listViewDeliverables";
-            this.listViewDeliverables.Size = new System.Drawing.Size(267, 210);
+            this.listViewDeliverables.Size = new System.Drawing.Size(282, 210);
             this.listViewDeliverables.TabIndex = 2;
             this.listViewDeliverables.UseCompatibleStateImageBehavior = false;
             this.listViewDeliverables.View = System.Windows.Forms.View.Details;
@@ -107,27 +107,29 @@
             // Deliverables
             // 
             this.Deliverables.Text = "Deliverables";
-            this.Deliverables.Width = 273;
+            this.Deliverables.Width = 216;
             // 
             // d
             // 
             this.d.Text = "Date";
+            this.d.Width = 125;
             // 
-            // listView2
+            // listViewTasks
             // 
-            this.listView2.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewTasks.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.listViewTasks.BackColor = System.Drawing.Color.White;
+            this.listViewTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewTasks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Location = new System.Drawing.Point(604, 48);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(257, 210);
-            this.listView2.TabIndex = 3;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listViewTasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewTasks.Location = new System.Drawing.Point(579, 48);
+            this.listViewTasks.Name = "listViewTasks";
+            this.listViewTasks.Size = new System.Drawing.Size(282, 210);
+            this.listViewTasks.TabIndex = 3;
+            this.listViewTasks.UseCompatibleStateImageBehavior = false;
+            this.listViewTasks.View = System.Windows.Forms.View.Details;
+            this.listViewTasks.SelectedIndexChanged += new System.EventHandler(this.listViewTasks_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -142,13 +144,13 @@
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(276, 48);
+            this.chart1.Location = new System.Drawing.Point(291, 48);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(322, 210);
+            this.chart1.Size = new System.Drawing.Size(282, 210);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
@@ -157,9 +159,9 @@
             this.lblStat.AutoSize = true;
             this.lblStat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStat.Location = new System.Drawing.Point(604, 0);
+            this.lblStat.Location = new System.Drawing.Point(579, 0);
             this.lblStat.Name = "lblStat";
-            this.lblStat.Size = new System.Drawing.Size(257, 45);
+            this.lblStat.Size = new System.Drawing.Size(282, 45);
             this.lblStat.TabIndex = 5;
             this.lblStat.Text = "On-Schedule";
             this.lblStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,7 +194,7 @@
         private System.Windows.Forms.Label lblProjName;
         private System.Windows.Forms.ListView listViewDeliverables;
         private System.Windows.Forms.ColumnHeader Deliverables;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listViewTasks;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ColumnHeader id;

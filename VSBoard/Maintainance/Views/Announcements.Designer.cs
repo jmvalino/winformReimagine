@@ -1,6 +1,6 @@
 ﻿namespace VSBoard.Maintainance.Views
 {
-    partial class Announcements
+    partial class Interstitial
     {
         /// <summary> 
         /// Required designer variable.

@@ -39,11 +39,9 @@ C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\MetroFramework.dll
 C:\Users\jmval\Documents\winformReimagine\VSBoard\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.App.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Maintain.resources
-C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Announcements.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Manhours.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Properties.Resources.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Announcements.resources
-C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Home.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Manhours.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.MMV.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Projects.resources
@@ -51,3 +49,10 @@ C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.csproj.Gener
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.exe
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.pdb
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.csprojResolveAssemblyReference.cache
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Interstitial.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Misc.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmProjects.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmManhours.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.MainAPP.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.BoardMDI.resources
+C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmHome.resources

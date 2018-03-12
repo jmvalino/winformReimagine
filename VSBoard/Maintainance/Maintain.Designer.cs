@@ -33,7 +33,7 @@
             this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manhoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.announcementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.announcements1 = new VSBoard.Maintainance.Views.Announcements();
+            this.announcements1 = new VSBoard.Maintainance.Views.Interstitial();
             this.menuStrip1.SuspendLayout();
             this.panelHolder.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +135,6 @@
         private System.Windows.Forms.ToolStripMenuItem manhoursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem announcementsToolStripMenuItem;
         private MetroFramework.Controls.MetroPanel panelHolder;
-        private Views.Announcements announcements1;
+        private Views.Interstitial announcements1;
     }
 }

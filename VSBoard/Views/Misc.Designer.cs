@@ -1,6 +1,6 @@
 ﻿namespace VSBoard.Views
 {
-    partial class MMV
+    partial class Misc
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,19 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // MMV
+            // Misc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VSBoard.Properties.Resources.mvv;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Name = "MMV";
-            this.Size = new System.Drawing.Size(896, 373);
+            this.BackgroundImage = global::VSBoard.Properties.Resources.Ionics__Core_Values;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Name = "Misc";
+            this.Load += new System.EventHandler(this.Misc_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }
