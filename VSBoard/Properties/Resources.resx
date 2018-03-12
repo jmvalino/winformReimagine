@@ -121,6 +121,12 @@
   <data name="message" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\message.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mvv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\mvv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cube-outline3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\cube-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="desktop_github_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\desktop_github_com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,13 +139,19 @@
   <data name="Ionics' Core Values" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Ionics' Core Values.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cube-outline1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\cube-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pattern" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\pattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circuit-board" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\circuit-board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mvv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\mvv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cube-outline2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\cube-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="account-multiple-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\account-multiple-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

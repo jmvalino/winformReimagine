@@ -15,34 +15,62 @@ namespace VSBoard
         public BoardMDI()
         {
             InitializeComponent();
-        }
-
-        void showHome()
-        {
-            Views.frmHome hm = new Views.frmHome();
-            hm.ShowDialog();
-        }
-
-        void showProjects()
-        {
-            Views.frmProjects proj = new Views.frmProjects();
-            proj.ShowDialog();
-        }
-        void showManhours()
-        {
-            Views.frmManhours man = new Views.frmManhours();
-            man.ShowDialog();
+           
         }
 
         private void BoardMDI_Load(object sender, EventArgs e)
         {
-            while(true)
+            Views.Home hm = new Views.Home();
+            hm.ShowDialog();
+        }
+
+        private void BoardMDI_Load_1(object sender, EventArgs e)
+        {
+            while (true)
             {
                 showHome();
                 showProjects();
                 showManhours();
+                //showAnnouncements();
+                showBanners();
+               
             }
         }
-        
+
+
+        void showHome()
+        {
+            lblSection.Text = "#DDG";
+            Views.Home home = new Views.Home();
+            home.ShowDialog();
+        }
+
+
+        void showProjects()
+        {
+            lblSection.Text = "#Projects";
+            Views.frmProjects proj = new Views.frmProjects();
+            proj.ShowDialog();
+        }
+
+        void showManhours()
+        {
+            lblSection.Text = "#Manhours";
+            Views.frmManhours man = new Views.frmManhours();
+            man.ShowDialog();
+        }
+        void showBanners()
+         {
+             lblSection.Text = "#Insides";
+            Views.frmBanners banners = new Views.frmBanners();
+            banners.ShowDialog();
+        }
+
+        void showAnnouncements()
+        {
+            lblSection.Text = "#Annoucements";
+            Views.frmAnnouncements ann = new Views.frmAnnouncements();
+            ann.ShowDialog();
+        }
     }
 }

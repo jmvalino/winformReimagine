@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -15,13 +15,16 @@ namespace VSBoard.Views
 {
     public partial class frmProjects : Form
     {
+        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+
+
         int value1 = 60, value2 = 70;
         LinkedList<String> projlist = new LinkedList<String>();
         int i = 0;
         //Task wait = Task.Delay(5000);
-        public OleDbCommand cm = new OleDbCommand();
-        public OleDbConnection cn = new OleDbConnection();
-        public OleDbDataReader dr;
+        public SqlCommand cm = new SqlCommand();
+        public SqlConnection cn = new SqlConnection();
+        public SqlDataReader dr;
 
         dbConnector connection = new dbConnector();
 
@@ -31,7 +34,14 @@ namespace VSBoard.Views
         public frmProjects()
         {
             InitializeComponent();
-            cn = new OleDbConnection(connection.constring);
+
+            Opacity = 0;      //first the opacity is 0
+
+            t1.Interval = 50;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start(); 
+
+            cn = new SqlConnection(connection.constring);
             cn.Open();
             getProjects();
             setManhour(Convert.ToInt32(projlist.ElementAtOrDefault(0).ToString()));
@@ -48,14 +58,14 @@ namespace VSBoard.Views
             string pname = "";
             ///////////////QUERY TO SELECT PROJECT////////////////////
             String sql = "Select * from tbl_projects where id = " + projid + " ";
-            cm = new OleDbCommand(sql, cn);
+            cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
 
                 lblProjectStat.Text = dr.GetValue(6).ToString();
-                value1 = Convert.ToInt32(dr.GetValue(4).ToString());
-                value2 = Convert.ToInt32(dr.GetValue(5).ToString());
+                value1 = 34;//Convert.ToInt32(dr.GetValue(4).ToString());
+                value2 = 67;//Convert.ToInt32(dr.GetValue(5).ToString());
                 //value2 = Convert.ToInt32(dr.GetValue(5).ToString());
                 lblProjectTitle.Text = dr.GetValue(1).ToString() +" Development";
                 pname = dr.GetValue(1).ToString();
@@ -95,15 +105,15 @@ namespace VSBoard.Views
 
         void deliverables(String project)
         {
-            String sql = "Select * from tbl_deliverables where project  like'" + project + "'";
-            cm = new OleDbCommand(sql, cn);
+            String sql = "Select * from tbl_deliverables where project  = '"+ project +"'";
+            cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
 
-                list = listViewDeliverables.Items.Add(dr.GetValue(0).ToString());
-                list.SubItems.Add(dr.GetValue(2).ToString());
-                list.SubItems.Add(dr.GetValue(3).ToString());
+                list = listViewDeliverables.Items.Add(dr.GetValue(1).ToString());
+                //list.SubItems.Add(dr.GetValue(2).ToString());
+                //list.SubItems.Add(dr.GetValue(3).ToString());
 
 
             }
@@ -112,13 +122,13 @@ namespace VSBoard.Views
 
         void Tasks(String project)
         {
-            String sql = "Select * from tbl_tasks where project  like'" + project + "'";
-            cm = new OleDbCommand(sql, cn);
+            String sql = "Select * from tbl_scheduledtask where Project  = '"+project+"'";
+            cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
 
-                list1 = listViewTasks.Items.Add(dr.GetValue(2).ToString());
+                list1 = listViewTasks.Items.Add(dr.GetValue(1).ToString());
                 //list.SubItems.Add(dr.GetValue(2).ToString());
                 //list.SubItems.Add(dr.GetValue(3).ToString());
 
@@ -153,7 +163,7 @@ namespace VSBoard.Views
         void getProjects()
         {
             String sql = "Select * from tbl_projects";
-            cm = new OleDbCommand(sql, cn);
+            cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -183,8 +193,11 @@ namespace VSBoard.Views
                 //App app = new App();
                // app.Show();
                // this.Hide();
-                this.Close();
                 this.Dispose();
+                this.Close();
+                //Views.Home home = new Views.Home();
+                //home.ShowDialog();
+              
                 // tableLayoutPanel1.Controls.Clear();
                 //lblProjName.Text = "ALL LOADED";
             }
@@ -195,6 +208,13 @@ namespace VSBoard.Views
             frmManhours nm = new frmManhours();
             nm.Show();
            // this.Close();
+        }
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.05;
         }
     }
 }

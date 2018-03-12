@@ -8,7 +8,10 @@ namespace VSBoard
 {
     public partial class dbConnector
     {
-        public string constring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=boardDB.mdb";
+        public string constring = @"Data Source=192.168.15.109;" +
+                                   "Initial Catalog=DB_SmartScheduler;" +
+                                   "User ID=sa;"+
+                                   "Password=t3$td3v;";
     }
 
 

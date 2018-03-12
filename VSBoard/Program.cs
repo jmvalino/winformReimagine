@@ -13,10 +13,10 @@ namespace VSBoard
         /// </summary>
         [STAThread]
         static void Main()
-        {
+       {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BoardMDI());
+            Application.Run(new Maintainance.Views.Banner());
         }
     }
 }

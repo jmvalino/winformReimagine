@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Data.OleDb;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace VSBoard.Views
 {
@@ -26,7 +25,6 @@ namespace VSBoard.Views
         dbConnector connection = new dbConnector();
 
         public ListViewItem list = new ListViewItem();
-        public ListViewItem list1 = new ListViewItem();
 
         /// <summary>
         /// IN-VIEW EDITS /////////
@@ -39,31 +37,18 @@ namespace VSBoard.Views
             
 
             InitializeComponent();
-          //  FadeOut(this, 100);
+           
             //db initialization //
             cn = new OleDbConnection(connection.constring);
             cn.Open();
             getProjects();
-            setManhour(Convert.ToInt32(projlist.ElementAtOrDefault(0).ToString()));  
             /// pie chart creation ///
             this.Dock = DockStyle.Fill;
-           // DrawPieChart(3, 3, 5, 6, 6);
+            DrawPieChart(3, 3, 5, 6, 6);
 
            
         }
 
-     
-
-        private async void FadeOut(Form o, int interval = 80)
-        {
-            //Object is fully visible. Fade it out
-            while (o.Opacity > 0.0)
-            {
-                await Task.Delay(interval);
-                o.Opacity -= 0.05;
-            }
-            o.Opacity = 0; //make fully invisible       
-        }
         void deliverables(String project)
         {
             String sql = "Select * from tbl_deliverables where project  like'"+project+"'";
@@ -76,23 +61,6 @@ namespace VSBoard.Views
                 list.SubItems.Add(dr.GetValue(2).ToString());
                 list.SubItems.Add(dr.GetValue(3).ToString());
             
-
-            }
-            dr.Close();
-        }
-
-        void Tasks(String project)
-        {
-            String sql = "Select * from tbl_tasks where project  like'" + project + "'";
-            cm = new OleDbCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-
-                list1 = listViewTasks.Items.Add(dr.GetValue(2).ToString());
-                //list.SubItems.Add(dr.GetValue(2).ToString());
-                //list.SubItems.Add(dr.GetValue(3).ToString());
-
 
             }
             dr.Close();
@@ -164,9 +132,7 @@ namespace VSBoard.Views
             }
             dr.Close();
             listViewDeliverables.Items.Clear();
-            listViewTasks.Items.Clear();
             deliverables(pname);
-            Tasks(pname);
 
             //////////GRAPH/////
             //lblStat.Text = value1.ToString();
@@ -176,17 +142,17 @@ namespace VSBoard.Views
 
             //Add a new Legend(if needed) and do some formating
             chart1.Legends.Add("MyLegend");
-            chart1.Legends[0].LegendStyle = LegendStyle.Column;
-            chart1.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            //chart1.Legends[0].LegendStyle = LegendStyle.Table;
+            //chart1.Legends[0].Docking = DockStyle.Bottom;
             chart1.Legends[0].Alignment = StringAlignment.Center;
             chart1.Legends[0].Title = "MANHOURS METER";
-           // chart1.Legends[0].BorderColor = Color.;
+            chart1.Legends[0].BorderColor = Color.Black;
 
             //Add a new chart-series
             string seriesname = "MySeriesName";
             chart1.Series.Add(seriesname);
             //set the chart-type to "Pie"
-            chart1.Series[seriesname].ChartType = SeriesChartType.Pie;
+            chart1.Series[seriesname].ChartType = SeriesChartType.Doughnut;
 
             //Add some datapoints so the series. in this case you can pass the values to this method
             chart1.Series[seriesname].Points.AddXY("CONSUMED", value1);
@@ -238,14 +204,9 @@ namespace VSBoard.Views
             }
             else if (i == projlist.Count)
             {
-              // tableLayoutPanel1.Controls.Clear();
-                //lblProjName.Text = "ALL LOADED";
+               tableLayoutPanel1.Controls.Clear();
+                lblProjName.Text = "ALL LOADED";
             }
-
-        }
-
-        private void listViewTasks_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

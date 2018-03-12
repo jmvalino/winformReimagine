@@ -14,13 +14,11 @@ namespace VSBoard
 {
     public partial class App : Form
     {
-        private int iScroll;
-        private string strString = "Over time, most database applications grow, become more complex, and need to support more users. At some point in the life of your Microsoft Office Access application, you might want to consider upsizing to it to a Microsoft SQL Server database to optimize performance, scalability, availability, security, reliability, and recoverability.";
         int i = 0;
         public App()
         {
             InitializeComponent();
-            //panelButtom.Dock = DockStyle.Fill;
+            panelButtom.Dock = DockStyle.Fill;
             showHome();
         }
         void clearBColors()
@@ -35,42 +33,11 @@ namespace VSBoard
 
             i++;
 
-
-            if (i == 4)
+           lblTime.Text = DateTime.Now.ToShortTimeString();
+            if (i == 1)
             {
 
-                hideBar();
-                showMisc();
-
-                //  menuStripMain.Items.
-                //projectsToolStripMenuItem.BackColor = Color.FromArgb(255, 232, 232);
-                //this.panelHolder.Controls.Clear();
-                //Views.Home home = new Views.Home();
-                //home.PerformAutoScale();
-                //panelHolder.Controls.Add(home);
-                //tableLayoutPanelCtr.Visible = false;
-
-            }
-
-            if (i == 6)
-            {
-
-                //hideBar();
-                showMMV();
-
-                //  menuStripMain.Items.
-                //projectsToolStripMenuItem.BackColor = Color.FromArgb(255, 232, 232);
-                //this.panelHolder.Controls.Clear();
-                //Views.Home home = new Views.Home();
-                //home.PerformAutoScale();
-                //panelHolder.Controls.Add(home);
-                //tableLayoutPanelCtr.Visible = false;
-
-            }
-            if (i == 8)
-            {
-
-                showBar();
+               
                 showProjects();
                 
               //  menuStripMain.Items.
@@ -102,34 +69,21 @@ namespace VSBoard
             if (i == 30)
             {
                 i = 0;
-                showHome();
+                return;
 
             }
 
             
         }
-
-        void showBar()
-        {
-            panelButtom.Show();
-            panelCrawl.Show();
-        }
-
-        void hideBar()
-        {
-            panelButtom.Hide();
-            panelCrawl.Hide();
-        }
         ///uc show functions///
 
         void showHome()
         {
-
             clearBColors();
-           // panelButtom.Dock = DockStyle.Bottom;
+            panelButtom.Dock = DockStyle.Bottom;
            // jToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
            this.panelHolder.Controls.Clear();
-           Views.frmHome home = new Views.frmHome();
+            Views.Home home = new Views.Home();
             home.PerformAutoScale();
             panelHolder.Controls.Add(home);
 
@@ -139,7 +93,7 @@ namespace VSBoard
         void showProjects()
         {
             clearBColors();
-            projectsToolStripMenuItem.BackColor = Color.HotPink;
+            projectsToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
            this.panelHolder.Controls.Clear();
             Views.Projects proj = new Views.Projects();
             proj.PerformAutoScale();
@@ -151,7 +105,7 @@ namespace VSBoard
         {
             clearBColors();
             //manToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
-            manhoursToolStripMenuItem.BackColor = Color.HotPink;
+            manhoursToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
           this.panelHolder.Controls.Clear();
             Views.Manhours man = new Views.Manhours();
             man.PerformAutoScale();
@@ -162,7 +116,7 @@ namespace VSBoard
         void showAnnouncements()
         {
             clearBColors();
-            jToolStripMenuItem.BackColor = Color.HotPink;
+            jToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
             //annToolStripMenuItem.BackColor = Color.FromArgb(244, 66, 182);
             this.panelHolder.Controls.Clear();
             Views.Announcements ann = new Views.Announcements();
@@ -171,26 +125,6 @@ namespace VSBoard
 
         }
 
-        void showMisc()
-        {
-            
-            this.panelHolder.Controls.Clear();
-            Views.Misc misc = new Views.Misc();
-            misc.PerformAutoScale();
-            panelHolder.Controls.Add(misc);
-
-        }
-
-
-        void showMMV()
-        {
-
-            this.panelHolder.Controls.Clear();
-            Views.MMV mmv = new Views.MMV();
-            mmv.PerformAutoScale();
-            panelHolder.Controls.Add(mmv);
-
-        }
 
         ///uc show functions///
 
@@ -252,34 +186,6 @@ namespace VSBoard
         private void jToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             showAnnouncements();
-        }
-
-        private void timerForClock_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToShortTimeString();
-
-           
-
-        }
-
-        private void lblTime_Click(object sender, EventArgs e)
-        {
-            panelButtom.Hide();
-            showMisc();
-        }
-
-        private void timerForCrawler_Tick(object sender, EventArgs e)
-        {
-            iScroll = iScroll + 1;
-            int iLmt = strString.Length - iScroll;
-            if (iLmt < 100)
-            {
-                iScroll = 0;
-            }
-
-            string str = strString.Substring(iScroll, 100);
-            lblCrawl.Text = str;
-
         }
     }
 }

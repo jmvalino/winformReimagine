@@ -79,5 +79,10 @@ namespace VSBoard.Views
                 //lblProjName.Text = "ALL LOADED";
             }
         }
+
+        private void Ticker_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

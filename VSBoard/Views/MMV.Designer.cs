@@ -34,10 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VSBoard.Properties.Resources.mvv;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "MMV";
-            this.Size = new System.Drawing.Size(896, 373);
+            this.Size = new System.Drawing.Size(755, 376);
             this.ResumeLayout(false);
 
         }

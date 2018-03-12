@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace VSBoard.Maintainance.Views
 {
-    public partial class Interstitial : UserControl
+    public partial class Announcements : Form
     {
-        public Interstitial()
+        public Announcements()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

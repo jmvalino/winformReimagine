@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace VSBoard.Maintainance
 {
-    public partial class Maintain : MetroForm
+    public partial class Maintain : Form
     {
         public Maintain()
         {

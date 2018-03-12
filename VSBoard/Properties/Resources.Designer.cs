@@ -63,6 +63,16 @@ namespace VSBoard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_multiple_outline {
+            get {
+                object obj = ResourceManager.GetObject("account-multiple-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circuit_board {
             get {
                 object obj = ResourceManager.GetObject("circuit-board", resourceCulture);
@@ -76,6 +86,36 @@ namespace VSBoard.Properties {
         internal static System.Drawing.Bitmap cube_outline {
             get {
                 object obj = ResourceManager.GetObject("cube-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cube_outline1 {
+            get {
+                object obj = ResourceManager.GetObject("cube-outline1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cube_outline2 {
+            get {
+                object obj = ResourceManager.GetObject("cube-outline2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cube_outline3 {
+            get {
+                object obj = ResourceManager.GetObject("cube-outline3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Javer Valino",
             "SMART PLUG",
@@ -54,7 +53,6 @@
             "RX-BOX",
             "ONLINE",
             "150"}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manhours));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.n = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,7 +60,6 @@
             this.s = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.t = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.imageListOnlineStat = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +68,7 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -84,15 +81,14 @@
             // 
             // listView1
             // 
-            this.listView1.AutoArrange = false;
             this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BackgroundImageTiled = true;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.n,
             this.p,
             this.s,
             this.t});
-            this.tableLayoutPanel1.SetColumnSpan(this.listView1, 5);
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -106,12 +102,9 @@
             this.listView1.Location = new System.Drawing.Point(3, 40);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1010, 387);
-            this.listView1.SmallImageList = this.imageListOnlineStat;
-            this.listView1.StateImageList = this.imageListOnlineStat;
             this.listView1.TabIndex = 2;
-            this.listView1.TileSize = new System.Drawing.Size(400, 150);
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // n
             // 
@@ -146,13 +139,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Manhour Tracker";
             // 
-            // imageListOnlineStat
-            // 
-            this.imageListOnlineStat.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListOnlineStat.ImageStream")));
-            this.imageListOnlineStat.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListOnlineStat.Images.SetKeyName(0, "circuit-board.png");
-            this.imageListOnlineStat.Images.SetKeyName(1, "message.png");
-            // 
             // Manhours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +162,5 @@
         private System.Windows.Forms.ColumnHeader s;
         private System.Windows.Forms.ColumnHeader t;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ImageList imageListOnlineStat;
     }
 }

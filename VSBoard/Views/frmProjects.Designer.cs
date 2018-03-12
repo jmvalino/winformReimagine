@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblProjectTitle = new System.Windows.Forms.Label();
             this.lblProjectStat = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.listViewDeliverables = new System.Windows.Forms.ListView();
-            this.listViewTasks = new System.Windows.Forms.ListView();
             this.d = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewTasks = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.timerTicker = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerTicker = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,17 +100,17 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(316, 24);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(307, 131);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -121,7 +120,6 @@
             this.listViewDeliverables.BackColor = System.Drawing.Color.Black;
             this.listViewDeliverables.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewDeliverables.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
             this.d});
             this.listViewDeliverables.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewDeliverables.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +130,11 @@
             this.listViewDeliverables.TabIndex = 3;
             this.listViewDeliverables.UseCompatibleStateImageBehavior = false;
             this.listViewDeliverables.View = System.Windows.Forms.View.Details;
+            // 
+            // d
+            // 
+            this.d.Text = "Deliverables";
+            this.d.Width = 290;
             // 
             // listViewTasks
             // 
@@ -149,26 +152,10 @@
             this.listViewTasks.UseCompatibleStateImageBehavior = false;
             this.listViewTasks.View = System.Windows.Forms.View.Details;
             // 
-            // d
-            // 
-            this.d.Text = "Deliverables";
-            this.d.Width = 290;
-            // 
-            // id
-            // 
-            this.id.Text = "id";
-            this.id.Width = 0;
-            // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tasks";
             this.columnHeader2.Width = 330;
-            // 
-            // timerTicker
-            // 
-            this.timerTicker.Enabled = true;
-            this.timerTicker.Interval = 5000;
-            this.timerTicker.Tick += new System.EventHandler(this.timerTicker_Tick);
             // 
             // pictureBox1
             // 
@@ -179,6 +166,12 @@
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // timerTicker
+            // 
+            this.timerTicker.Enabled = true;
+            this.timerTicker.Interval = 5000;
+            this.timerTicker.Tick += new System.EventHandler(this.timerTicker_Tick);
             // 
             // frmProjects
             // 
@@ -209,7 +202,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ListView listViewDeliverables;
         private System.Windows.Forms.ListView listViewTasks;
-        private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader d;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Timer timerTicker;
