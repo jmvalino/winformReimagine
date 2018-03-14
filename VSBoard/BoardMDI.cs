@@ -72,5 +72,10 @@ namespace VSBoard
             Views.frmAnnouncements ann = new Views.frmAnnouncements();
             ann.ShowDialog();
         }
+
+        private void lblSection_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

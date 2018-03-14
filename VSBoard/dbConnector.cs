@@ -8,7 +8,7 @@ namespace VSBoard
 {
     public partial class dbConnector
     {
-        public string constring = @"Data Source=192.168.15.109;" +
+        public string constring = @"Data Source=192.168.15.159;" +
                                    "Initial Catalog=DB_SmartScheduler;" +
                                    "User ID=sa;"+
                                    "Password=t3$td3v;";

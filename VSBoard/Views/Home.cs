@@ -49,7 +49,13 @@ namespace VSBoard.Views
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(10);
+          
+           this.Close();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //this.ParentForm.Close();
         }
     }
 }

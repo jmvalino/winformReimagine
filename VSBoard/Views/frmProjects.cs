@@ -63,11 +63,11 @@ namespace VSBoard.Views
             while (dr.Read())
             {
 
-                lblProjectStat.Text = dr.GetValue(6).ToString();
+                lblProjectStat.Text = dr.GetValue(3).ToString();
                 value1 = 34;//Convert.ToInt32(dr.GetValue(4).ToString());
                 value2 = 67;//Convert.ToInt32(dr.GetValue(5).ToString());
                 //value2 = Convert.ToInt32(dr.GetValue(5).ToString());
-                lblProjectTitle.Text = dr.GetValue(1).ToString() +" Development";
+                lblProjectTitle.Text = dr.GetValue(1).ToString();
                 pname = dr.GetValue(1).ToString();
 
             }

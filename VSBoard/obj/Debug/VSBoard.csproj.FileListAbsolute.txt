@@ -97,3 +97,4 @@ C:\Users\jmval\Documents\winformReimagine-master\VSBoard\obj\Debug\VSBoard.exe
 C:\Users\jmval\Documents\winformReimagine-master\VSBoard\obj\Debug\VSBoard.pdb
 C:\Users\jmval\Documents\winformReimagine-master\VSBoard\obj\Debug\VSBoard.Maintainance.Maintain.resources
 C:\Users\jmval\Documents\winformReimagine-master\VSBoard\obj\Debug\VSBoard.Views.frmAnnouncements.resources
+C:\Users\jmval\Documents\winformReimagine-master\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Project.resources

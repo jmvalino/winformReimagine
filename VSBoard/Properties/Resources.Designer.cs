@@ -143,6 +143,26 @@ namespace VSBoard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_multiple {
+            get {
+                object obj = ResourceManager.GetObject("image-multiple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information {
+            get {
+                object obj = ResourceManager.GetObject("information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ionics__Core_Values {
             get {
                 object obj = ResourceManager.GetObject("Ionics\' Core Values", resourceCulture);
@@ -163,6 +183,16 @@ namespace VSBoard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap message_outline {
+            get {
+                object obj = ResourceManager.GetObject("message-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mvv {
             get {
                 object obj = ResourceManager.GetObject("mvv", resourceCulture);
@@ -176,6 +206,16 @@ namespace VSBoard.Properties {
         internal static System.Drawing.Bitmap pattern {
             get {
                 object obj = ResourceManager.GetObject("pattern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_outline {
+            get {
+                object obj = ResourceManager.GetObject("settings-outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

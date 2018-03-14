@@ -42,6 +42,7 @@
             this.lblSection.Size = new System.Drawing.Size(315, 108);
             this.lblSection.TabIndex = 0;
             this.lblSection.Text = "#DDG";
+            this.lblSection.Click += new System.EventHandler(this.lblSection_Click);
             // 
             // BoardMDI
             // 

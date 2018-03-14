@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.listViewDeliverables = new System.Windows.Forms.ListView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtContent = new System.Windows.Forms.RichTextBox();
+            this.cboProject = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -52,8 +52,8 @@
             this.listViewDeliverables.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader3});
             this.listViewDeliverables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDeliverables.Location = new System.Drawing.Point(439, 30);
             this.listViewDeliverables.Name = "listViewDeliverables";
@@ -62,23 +62,43 @@
             this.listViewDeliverables.UseCompatibleStateImageBehavior = false;
             this.listViewDeliverables.View = System.Windows.Forms.View.Details;
             // 
-            // richTextBox1
+            // columnHeader1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(110, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(298, 62);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 0;
             // 
-            // comboBox1
+            // columnHeader2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(298, 28);
-            this.comboBox1.TabIndex = 2;
+            this.columnHeader2.Text = "Deliverable";
+            this.columnHeader2.Width = 191;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Project";
+            this.columnHeader3.Width = 230;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Date";
+            this.columnHeader4.Width = 309;
+            // 
+            // txtContent
+            // 
+            this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContent.Location = new System.Drawing.Point(110, 32);
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(298, 62);
+            this.txtContent.TabIndex = 1;
+            this.txtContent.Text = "";
+            // 
+            // cboProject
+            // 
+            this.cboProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProject.FormattingEnabled = true;
+            this.cboProject.Location = new System.Drawing.Point(110, 111);
+            this.cboProject.Name = "cboProject";
+            this.cboProject.Size = new System.Drawing.Size(298, 28);
+            this.cboProject.TabIndex = 2;
             // 
             // label1
             // 
@@ -99,26 +119,6 @@
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Project";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "id";
-            this.columnHeader1.Width = 0;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Deliverable";
-            this.columnHeader2.Width = 191;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Project";
-            this.columnHeader3.Width = 230;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Status";
-            this.columnHeader4.Width = 309;
             // 
             // comboBox2
             // 
@@ -169,6 +169,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -215,12 +216,13 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.cboProject);
+            this.Controls.Add(this.txtContent);
             this.Controls.Add(this.listViewDeliverables);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Deliverables";
             this.Text = "Deliverables";
+            this.Load += new System.EventHandler(this.Deliverables_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,8 +235,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox txtContent;
+        private System.Windows.Forms.ComboBox cboProject;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;

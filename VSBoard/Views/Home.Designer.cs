@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.Ticker = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,14 +40,51 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Ticker = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Ticker
+            // 
+            this.Ticker.Enabled = true;
+            this.Ticker.Interval = 1000;
+            this.Ticker.Tick += new System.EventHandler(this.Ticker_Tick);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(621, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(617, 50);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Design && Development Group";
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.lblTime.Location = new System.Drawing.Point(549, 263);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(315, 108);
+            this.lblTime.TabIndex = 2;
+            this.lblTime.Text = "#DDG";
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
+            // 
+            // metroProgressSpinner1
+            // 
+            this.metroProgressSpinner1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(889, 275);
+            this.metroProgressSpinner1.Maximum = 100;
+            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(90, 84);
+            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Pink;
+            this.metroProgressSpinner1.TabIndex = 3;
             // 
             // panel1
             // 
@@ -121,41 +162,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Announcements";
             // 
-            // Ticker
-            // 
-            this.Ticker.Enabled = true;
-            this.Ticker.Interval = 1000;
-            this.Ticker.Tick += new System.EventHandler(this.Ticker_Tick);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(621, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(402, 33);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Design && Development Group";
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.lblTime.Location = new System.Drawing.Point(663, 272);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(315, 108);
-            this.lblTime.TabIndex = 2;
-            this.lblTime.Text = "#DDG";
-            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1134, 380);
+            this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -163,6 +176,7 @@
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -185,5 +199,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTime;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
     }
 }

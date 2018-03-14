@@ -16,5 +16,33 @@ namespace VSBoard.Maintainance
         {
             InitializeComponent();
         }
+
+        private void btnAnnoucements_Click(object sender, EventArgs e)
+        {
+            Views.Announcements ann = new Views.Announcements();
+            ann.ShowDialog();
+        }
+
+        private void btnBanners_Click(object sender, EventArgs e)
+        {
+            Views.Banner ban = new Views.Banner();
+            ban.ShowDialog();
+        }
+
+        private void btnMeta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llPlay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            BoardMDI board = new BoardMDI();
+            board.ShowDialog();
+        }
     }
 }

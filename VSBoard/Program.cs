@@ -16,7 +16,7 @@ namespace VSBoard
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Maintainance.Views.Banner());
+            Application.Run(new Maintainance.Maintain());
         }
     }
 }

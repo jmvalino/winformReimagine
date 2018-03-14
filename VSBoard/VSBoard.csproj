@@ -94,6 +94,12 @@
     <Compile Include="Maintainance\Views\Deliverables.Designer.cs">
       <DependentUpon>Deliverables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintainance\Views\Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Project.Designer.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="Maintainance\Views\Deliverables.resx">
       <DependentUpon>Deliverables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Views\Project.resx">
+      <DependentUpon>Project.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -193,6 +202,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\image-multiple.png" />
+    <Content Include="Assets\information.png" />
+    <Content Include="Assets\message-outline.png" />
+    <Content Include="Assets\settings-outline.png" />
     <Content Include="Assets\user_green.png" />
     <None Include="Assets\account-multiple-outline.png" />
     <Content Include="Assets\circuit-board.png" />
