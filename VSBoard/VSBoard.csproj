@@ -88,11 +88,23 @@
     <Compile Include="Maintainance\Views\Banner.Designer.cs">
       <DependentUpon>Banner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintainance\Views\Configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Configuration.Designer.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintainance\Views\Deliverables.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maintainance\Views\Deliverables.Designer.cs">
       <DependentUpon>Deliverables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintainance\Views\Meta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintainance\Views\Meta.Designer.cs">
+      <DependentUpon>Meta.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintainance\Views\Project.cs">
       <SubType>Form</SubType>
@@ -158,8 +170,14 @@
     <EmbeddedResource Include="Maintainance\Views\Banner.resx">
       <DependentUpon>Banner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Views\Configuration.resx">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintainance\Views\Deliverables.resx">
       <DependentUpon>Deliverables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintainance\Views\Meta.resx">
+      <DependentUpon>Meta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintainance\Views\Project.resx">
       <DependentUpon>Project.cs</DependentUpon>

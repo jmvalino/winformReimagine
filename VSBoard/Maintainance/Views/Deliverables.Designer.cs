@@ -31,8 +31,8 @@
             this.listViewDeliverables = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtContent = new System.Windows.Forms.RichTextBox();
             this.cboProject = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,15 +72,15 @@
             this.columnHeader2.Text = "Deliverable";
             this.columnHeader2.Width = 191;
             // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Project";
-            this.columnHeader3.Width = 230;
-            // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Date";
             this.columnHeader4.Width = 309;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Project";
+            this.columnHeader3.Width = 230;
             // 
             // txtContent
             // 
@@ -221,6 +221,7 @@
             this.Controls.Add(this.listViewDeliverables);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Deliverables";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deliverables";
             this.Load += new System.EventHandler(this.Deliverables_Load);
             this.ResumeLayout(false);

@@ -24,10 +24,13 @@ namespace VSBoard.Maintainance.Views
         dbConnector connection = new dbConnector();
 
         public ListViewItem list = new ListViewItem();
-  
+        int imageID = 0;
+        int rowg = 0;
         public Banner()
         {
             InitializeComponent();
+            cn = new SqlConnection(connection.constring);
+            cn.Open();
         }
 
         private void Banner_Load(object sender, EventArgs e)
@@ -61,12 +64,13 @@ namespace VSBoard.Maintainance.Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            button2.Enabled = true;
             try
             {
                 //Get image data from gridview column.
                 byte[] imageData = (byte[])dataGridView1.Rows[e.RowIndex].Cells["ImageData"].Value;
-
+                imageID = (int)dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
+                rowg = e.RowIndex;
                 //Initialize image variable
                 Image newImage;
                 //Read image data into a memory stream
@@ -84,7 +88,7 @@ namespace VSBoard.Maintainance.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                return;
             }
         }
 
@@ -154,8 +158,22 @@ namespace VSBoard.Maintainance.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Please select a valid banner !");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string sql = "delete from tbl_banners where id = @ImageID";
+            cm = new SqlCommand(sql, cn);
+            cm.Parameters.Add(new SqlParameter("@ImageID", (int)imageID));
+            cm.ExecuteNonQuery();
+            MessageBox.Show("Banner successfully deleted", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cm.Dispose();
+            //listViewAnnouncements.Items.Clear();
+            //getAnnouncement();
+            Banner_Load(sender,e);
+            button2.Enabled = false;
         }
 
         

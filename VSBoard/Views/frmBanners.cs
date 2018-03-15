@@ -58,7 +58,7 @@ namespace VSBoard.Views
             while (dr.Read())
             {
 
-                projlist.AddLast((byte[])dr.GetValue(1));
+                projlist.AddLast((byte[])dr.GetValue(2));
                // ImagemByte = (byte[])dr.GetValue(1);
 
 

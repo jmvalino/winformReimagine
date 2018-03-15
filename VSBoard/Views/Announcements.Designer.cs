@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAnnouncement = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Ticker = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -43,7 +43,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.385696F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.6143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -59,6 +59,29 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(898, 410);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.BackgroundImage = global::VSBoard.Properties.Resources.pattern;
+            this.panel1.Controls.Add(this.lblAnnouncement);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(56, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(777, 228);
+            this.panel1.TabIndex = 4;
+            // 
+            // lblAnnouncement
+            // 
+            this.lblAnnouncement.BackColor = System.Drawing.Color.Transparent;
+            this.lblAnnouncement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnouncement.Location = new System.Drawing.Point(0, 0);
+            this.lblAnnouncement.Name = "lblAnnouncement";
+            this.lblAnnouncement.Size = new System.Drawing.Size(777, 228);
+            this.lblAnnouncement.TabIndex = 0;
+            this.lblAnnouncement.Text = "ANNOUNCEMENTS";
+            this.lblAnnouncement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -70,29 +93,6 @@
             this.label1.Size = new System.Drawing.Size(410, 63);
             this.label1.TabIndex = 5;
             this.label1.Text = "Announcements";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.BackgroundImage = global::VSBoard.Properties.Resources.pattern;
-            this.panel1.Controls.Add(this.lblAnnouncement);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(56, 66);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 228);
-            this.panel1.TabIndex = 4;
-            // 
-            // lblAnnouncement
-            // 
-            this.lblAnnouncement.BackColor = System.Drawing.Color.Transparent;
-            this.lblAnnouncement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnouncement.Location = new System.Drawing.Point(0, 0);
-            this.lblAnnouncement.Name = "lblAnnouncement";
-            this.lblAnnouncement.Size = new System.Drawing.Size(778, 228);
-            this.lblAnnouncement.TabIndex = 0;
-            this.lblAnnouncement.Text = "ANNOUNCEMENTS";
-            this.lblAnnouncement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ticker
             // 

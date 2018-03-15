@@ -67,17 +67,18 @@
             // 
             this.btnAnnoucements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
             this.btnAnnoucements.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnnoucements.BackgroundImage")));
+            this.btnAnnoucements.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnnoucements.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAnnoucements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnoucements.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnoucements.ForeColor = System.Drawing.Color.White;
             this.btnAnnoucements.Image = global::VSBoard.Properties.Resources.message_outline;
-            this.btnAnnoucements.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnnoucements.Location = new System.Drawing.Point(219, 53);
             this.btnAnnoucements.Name = "btnAnnoucements";
             this.btnAnnoucements.Size = new System.Drawing.Size(218, 86);
             this.btnAnnoucements.TabIndex = 0;
             this.btnAnnoucements.Text = "Announcements";
+            this.btnAnnoucements.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAnnoucements.UseVisualStyleBackColor = false;
             this.btnAnnoucements.Click += new System.EventHandler(this.btnAnnoucements_Click);
             // 
@@ -103,17 +104,18 @@
             // 
             this.btnBanners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
             this.btnBanners.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBanners.BackgroundImage")));
+            this.btnBanners.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBanners.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBanners.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanners.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanners.ForeColor = System.Drawing.Color.White;
             this.btnBanners.Image = global::VSBoard.Properties.Resources.image_multiple;
-            this.btnBanners.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBanners.Location = new System.Drawing.Point(443, 53);
             this.btnBanners.Name = "btnBanners";
             this.btnBanners.Size = new System.Drawing.Size(210, 86);
             this.btnBanners.TabIndex = 2;
             this.btnBanners.Text = "Banners";
+            this.btnBanners.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBanners.UseVisualStyleBackColor = false;
             this.btnBanners.Click += new System.EventHandler(this.btnBanners_Click);
             // 
@@ -131,7 +133,7 @@
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(210, 69);
             this.btnConfig.TabIndex = 3;
-            this.btnConfig.Text = "General Configuration";
+            this.btnConfig.Text = "Flash Configuration";
             this.btnConfig.UseVisualStyleBackColor = false;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 

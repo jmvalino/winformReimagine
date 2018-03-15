@@ -49,7 +49,7 @@ namespace VSBoard.Views
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-          
+            Application.Exit();
            this.Close();
         }
 

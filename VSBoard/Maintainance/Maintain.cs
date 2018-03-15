@@ -31,12 +31,14 @@ namespace VSBoard.Maintainance
 
         private void btnMeta_Click(object sender, EventArgs e)
         {
-
+            Views.Meta meta = new Views.Meta();
+            meta.ShowDialog();
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
-
+            Views.Configuration conf = new Views.Configuration();
+            conf.ShowDialog();
         }
 
         private void llPlay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
