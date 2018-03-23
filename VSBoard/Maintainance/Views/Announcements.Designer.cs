@@ -96,7 +96,7 @@
             // 
             // dtpDU
             // 
-            this.dtpDU.CustomFormat = "yyyy-MM-dd hh:MM:ss";
+            this.dtpDU.CustomFormat = "yyyy-MM-dd HH:mm";
             this.dtpDU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDU.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDU.Location = new System.Drawing.Point(107, 232);

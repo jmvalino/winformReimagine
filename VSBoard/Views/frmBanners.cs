@@ -35,6 +35,7 @@ namespace VSBoard.Views
             InitializeComponent();
             cn = new SqlConnection(connection.constring);
             cn.Open();
+            setDelay();
             getBanners();
             loadBanner();
             Opacity = 0;      //first the opacity is 0
@@ -42,6 +43,22 @@ namespace VSBoard.Views
             t1.Interval = 50;   //we'll increase the opacity every 10ms
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
             t1.Start(); 
+        }
+        void setDelay()
+        {
+            String sql = "Select delay_banners from tbl_meta_conf where id like 3";
+            cm = new SqlCommand(sql, cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+
+                Ticker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+
+
+                //  i++;
+            }
+            dr.Close();
+
         }
         void fadeIn(object sender, EventArgs e)
         {

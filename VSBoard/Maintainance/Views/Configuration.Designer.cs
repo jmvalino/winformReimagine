@@ -41,10 +41,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.numericUpDownManhours = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnnouncements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownManhours)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +79,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 179);
+            this.label3.Location = new System.Drawing.Point(12, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 6;
@@ -97,7 +101,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(59, 227);
+            this.label5.Location = new System.Drawing.Point(59, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 8;
@@ -107,33 +111,73 @@
             // 
             this.numericUpDownProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownProject.Location = new System.Drawing.Point(150, 121);
+            this.numericUpDownProject.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.numericUpDownProject.Name = "numericUpDownProject";
             this.numericUpDownProject.Size = new System.Drawing.Size(64, 26);
             this.numericUpDownProject.TabIndex = 9;
+            this.numericUpDownProject.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // numericUpDownAnnouncements
             // 
             this.numericUpDownAnnouncements.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownAnnouncements.Location = new System.Drawing.Point(150, 177);
+            this.numericUpDownAnnouncements.Location = new System.Drawing.Point(150, 223);
+            this.numericUpDownAnnouncements.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.numericUpDownAnnouncements.Name = "numericUpDownAnnouncements";
             this.numericUpDownAnnouncements.Size = new System.Drawing.Size(64, 26);
             this.numericUpDownAnnouncements.TabIndex = 10;
+            this.numericUpDownAnnouncements.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // numericUpDownBanner
             // 
             this.numericUpDownBanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownBanner.Location = new System.Drawing.Point(150, 227);
+            this.numericUpDownBanner.Location = new System.Drawing.Point(150, 264);
+            this.numericUpDownBanner.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.numericUpDownBanner.Name = "numericUpDownBanner";
             this.numericUpDownBanner.Size = new System.Drawing.Size(64, 26);
             this.numericUpDownBanner.TabIndex = 11;
+            this.numericUpDownBanner.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             // 
             // numericUpDownHome
             // 
             this.numericUpDownHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownHome.Location = new System.Drawing.Point(150, 64);
+            this.numericUpDownHome.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             this.numericUpDownHome.Name = "numericUpDownHome";
             this.numericUpDownHome.Size = new System.Drawing.Size(64, 26);
             this.numericUpDownHome.TabIndex = 12;
+            this.numericUpDownHome.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -179,13 +223,57 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "s";
             // 
+            // numericUpDownManhours
+            // 
+            this.numericUpDownManhours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownManhours.Location = new System.Drawing.Point(150, 176);
+            this.numericUpDownManhours.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownManhours.Name = "numericUpDownManhours";
+            this.numericUpDownManhours.Size = new System.Drawing.Size(64, 26);
+            this.numericUpDownManhours.TabIndex = 17;
+            this.numericUpDownManhours.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(48, 176);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Manhours";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(220, 270);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 20);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "s";
+            // 
             // Configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.BackgroundImage = global::VSBoard.Properties.Resources.pattern;
-            this.ClientSize = new System.Drawing.Size(271, 274);
+            this.ClientSize = new System.Drawing.Size(280, 326);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.numericUpDownManhours);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -203,10 +291,13 @@
             this.Name = "Configuration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Configuration_FormClosing);
+            this.Load += new System.EventHandler(this.Configuration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownProject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnnouncements)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownManhours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +318,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown numericUpDownManhours;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

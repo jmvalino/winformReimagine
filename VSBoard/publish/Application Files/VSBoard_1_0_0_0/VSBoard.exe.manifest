@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="VSBoard.exe" version="1.0.0.0" publicKeyToken="ceb6d6326aeee7e4" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="board.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="VSBoard" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="VSBoard.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MetroFramework.Design" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.dll" size="152576">
+      <assemblyIdentity name="MetroFramework" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>uvMm9S05FV1yJGWUf0zGfm6Qz9D4mVTquVlWjpvDQqo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Fonts.dll" size="672256">
+      <assemblyIdentity name="MetroFramework.Fonts" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6WAw/dr354QBVn7oJICtde5I01VhmaP4XA7Gae2sLvQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSBoard.exe" size="636328">
+      <assemblyIdentity name="VSBoard" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>hiVljxnQfNKwzzOtUvHDBLu4XUt8viI1VGHFZHc5GTg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Assets\circuit-board.png" size="34561">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KIQzP0YwGqi9D4fEJLRuxpmUWRg+ELbsTVZvde1AsJI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\cube-outline.png" size="1094">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tBcKaf1mgpaptaTGJC08/SHPgHAeULkWt35Zq4Az/pk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\desktop_github_com.png" size="46748">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dCz1Bere1P6SKY5C7AEsSOQ+Syt/IrkW8leYRnFZjiU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\human.png" size="666">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uwPm6pomJOJCYDgow9qiD6EQKARDt9j8mN9j/oNJdJc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\image-multiple.png" size="1001">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iolAMqfPEMoaKvJrGqQ1knbsfEjXFCrQkLH9EAtdWcM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\information.png" size="989">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JH06YypDT0FUUZuc17WuUCeTYZPPpPP+I6JDGlg8mjg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\Ionics' Core Values.JPG" size="89212">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FwS7dgSA1Z6fJO3+/ZoXMJMkhuWo5SARDDasmM3/ul4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\message.png" size="571">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6YSc5NHsg1rSSpgjLOrdNILGAoEYuYqxzvIoBVBqXJ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\message-outline.png" size="680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Oh/nyf+21/4mJmVOL4QNoJYDupuzTAHHWnMyK0YUmKQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\milestone.png" size="734">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e4z3XYsvkWR9/LH4N60XbcOBy7esCpvu0nVjjbwXuaY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\mvv.png" size="91920">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O6VKxPHE2l96x48Xg1LxM1j02nAAFEIzroq5i0E2O54=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\pattern.png" size="42251">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ijLkJ8TDgR7KsPjZdJzu+4ndW4bxNKOsB4TSIkPhAjE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\prime.jpg" size="34080">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ETS+RZdlWh4sB15R7UUYsNUkZmF3gH5zRg2+qVsXIS0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\settings-outline.png" size="1410">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aXxY/ArRGhoROgybrbOcmbTLhqoeNtiO6O3uV1EcSQs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\user_green.png" size="1237">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FujSDJJLhr3EBIifft1GiaJjgcIJFYN8Awr1iawrAJk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="board.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CIlO5j+S1VPaAPzfW/mc7T4jfY5LRHKKyQclLMPDHeY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VSBoard.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=IONICS\jmval" issuerKeyHash="7e84ddb96688f4f44198a47864f12f119c72eff5" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>aGuMCDixwpqnkqTAG754sdePmLAPrExy7HuG5cexBlg=</DigestValue></Reference></SignedInfo><SignatureValue>QNkfBIe3aizuspPosms7iKfMTBqsDEimMtT2Or34BroDkiam0vaCJJV1DcYyJbPRtwESNotNrz8RCH/nc+GoLEig7y9UUcx1UbHudCGdlYZQHeZ+ASEiGwCjC0lkBtp2Jf2Sho1iSY9y+4Sop5iAj0vDYHjxJdfhmoNy3D8r1sA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>kZWqgtu7Gdm6TeTAg48M/LM6qGpM+jZbH7HY1ykeyZAFkW6syKZiVrEbLTOjAkwpANK6w3KjJsqw8dOVi0hL2zJGCkmijC1MgWpVK3qWaAKAh3VQ9pjjrlwMGRTjOZkquTtfrmiCgoibwgqtzsOwf1Xwb28XZYCZpmHoy81gu4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5806b1c7e5867bec724cac0fb0988fd7b178be1bc0a492a79ac2b138088c6b68" Description="" Url=""><as:assemblyIdentity name="VSBoard.exe" version="1.0.0.0" publicKeyToken="ceb6d6326aeee7e4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=IONICS\jmval</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ANMjvCptJmg1+AJ928mYWv9ZrK6DGD0DkMP4fq6ZHWk=</DigestValue></Reference></SignedInfo><SignatureValue>ee8x3qZ8Lm82KZSkvR6XTgANKNp5ZJMbtBLWtxKg4re5/37RdxGSq0G61abD6Q6jGjioXFzvUQRo3apdzEL3fvk9trkclLG6P6As/CTif7kuWxiEzwe1BD9kpO+jp9/ZgYYa2mmRDU05Yljd31ikbG6fjBy6S2fpySxUBu6y+5s=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>kZWqgtu7Gdm6TeTAg48M/LM6qGpM+jZbH7HY1ykeyZAFkW6syKZiVrEbLTOjAkwpANK6w3KjJsqw8dOVi0hL2zJGCkmijC1MgWpVK3qWaAKAh3VQ9pjjrlwMGRTjOZkquTtfrmiCgoibwgqtzsOwf1Xwb28XZYCZpmHoy81gu4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQVV4M+CnHcZxJWKiJI7MNuDANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgASQBPAE4ASQBDAFMAXABqAG0AdgBhAGwwHhcNMTgwMzE2MDgyNTMzWhcNMTkwMzE2MTQyNTMzWjAjMSEwHwYDVQQDHhgASQBPAE4ASQBDAFMAXABqAG0AdgBhAGwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJGVqoLbuxnZuk3kwIOPDPyzOqhqTPo2Wx+x2NcpHsmQBZFurMimYlaxGy0zowJMKQDSusNyoybKsPHTlYtIS9syRgpJoowtTIFqVSt6lmgCgId1UPaY465cDBkU4zmZKrk7X65ogoKIm8IKrc7DsH9V8G9vF2WAmaZh6MvNYLuJAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAOGiEYqFJSgjTfX252UlQRVIQetX0WSX+Btx2HdrVjD69S7JBjW5MZkhp30tsEkcqtuWIiX2+nLIm/TSc0it6eeqUyIU2x/dpNpdAzDnm/iwSF4FTSz44mMadcmwrAP33G4SVi6zBuTPCnPsTv32bAIftTD41VO3LfmYm/umM34k=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

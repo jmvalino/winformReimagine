@@ -12,6 +12,7 @@ namespace VSBoard
 {
     public partial class BoardMDI : Form
     {
+       
         public BoardMDI()
         {
             InitializeComponent();
@@ -26,54 +27,63 @@ namespace VSBoard
 
         private void BoardMDI_Load_1(object sender, EventArgs e)
         {
-            while (true)
-            {
+            
+                
                 showHome();
                 showProjects();
                 showManhours();
-                //showAnnouncements();
+                showAnnouncements();
                 showBanners();
-               
-            }
+
+                BoardMDI_Load_1(sender, e);
+            
         }
 
+        
 
         void showHome()
         {
-            lblSection.Text = "#DDG";
-            Views.Home home = new Views.Home();
+            lblSection.Text = "DDG";
+           Views.Home home = new Views.Home();
             home.ShowDialog();
+           
+            //home.ParentForm.Close();
         }
 
 
         void showProjects()
         {
-            lblSection.Text = "#Projects";
+            lblSection.Text = "Projects";
             Views.frmProjects proj = new Views.frmProjects();
             proj.ShowDialog();
         }
 
         void showManhours()
         {
-            lblSection.Text = "#Manhours";
+            lblSection.Text = "Manhours";
             Views.frmManhours man = new Views.frmManhours();
             man.ShowDialog();
         }
         void showBanners()
          {
-             lblSection.Text = "#Insides";
+             lblSection.Text = "DDG";
             Views.frmBanners banners = new Views.frmBanners();
             banners.ShowDialog();
         }
 
         void showAnnouncements()
         {
-            lblSection.Text = "#Annoucements";
+            lblSection.Text = "Annoucements";
             Views.frmAnnouncements ann = new Views.frmAnnouncements();
             ann.ShowDialog();
         }
 
         private void lblSection_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BoardMDI_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

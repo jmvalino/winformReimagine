@@ -24,9 +24,7 @@ namespace VSBoard.Maintainance.Views
         public Announcements()
         {
             InitializeComponent();
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
-            getAnnouncement();
+            
             
         }
 
@@ -92,13 +90,13 @@ namespace VSBoard.Maintainance.Views
         {
             if (txtTitle.Text == "" || txtContent.Text == "")
             {
-                MessageBox.Show("Please input the empty fields", "Christian Kiddie Star Academy", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please input the empty fields", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 
 
-                string sql = "update tbl_Announcements set title = '" + txtTitle.Text + "',a_content = '" + txtContent.Text + "' where id like '" + id+ "'";
+                string sql = "update tbl_Announcements set title = '" + txtTitle.Text + "',display_until = '"+dtpDU.Text+"',a_content = '" + txtContent.Text + "' where id like '" + id+ "'";
                 cm = new SqlCommand(sql, cn);
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Announcement successfully updated", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -138,7 +136,19 @@ namespace VSBoard.Maintainance.Views
 
         private void Announcements_Load(object sender, EventArgs e)
         {
-           
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+                getAnnouncement();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                this.Dispose();
+                this.Close();
+
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

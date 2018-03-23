@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlTypes;
 
 namespace VSBoard.Maintainance
 {
@@ -44,7 +45,18 @@ namespace VSBoard.Maintainance
         private void llPlay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             BoardMDI board = new BoardMDI();
-            board.ShowDialog();
+            board.Show();
+        }
+
+        private void dbconfig_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dbConnector conf = new dbConnector();
+            conf.ShowDialog();
+        }
+
+        private void Maintain_Load(object sender, EventArgs e)
+        {
+          
         }
     }
 }

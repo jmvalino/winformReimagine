@@ -65,10 +65,12 @@
             // txtImagePath
             // 
             this.txtImagePath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtImagePath.Enabled = false;
             this.txtImagePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImagePath.Location = new System.Drawing.Point(27, 303);
+            this.txtImagePath.Location = new System.Drawing.Point(27, 298);
+            this.txtImagePath.Multiline = true;
             this.txtImagePath.Name = "txtImagePath";
-            this.txtImagePath.Size = new System.Drawing.Size(249, 19);
+            this.txtImagePath.Size = new System.Drawing.Size(249, 28);
             this.txtImagePath.TabIndex = 2;
             // 
             // btnAdd

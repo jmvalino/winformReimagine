@@ -35,6 +35,7 @@
             this.btnBanners = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.llPlay = new System.Windows.Forms.LinkLabel();
+            this.dbconfig = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnBanners, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnConfig, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.llPlay, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dbconfig, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -141,28 +143,43 @@
             // 
             this.llPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.llPlay.AutoSize = true;
-            this.llPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llPlay.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llPlay.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
-            this.llPlay.Location = new System.Drawing.Point(670, 258);
+            this.llPlay.Location = new System.Drawing.Point(668, 257);
             this.llPlay.Name = "llPlay";
-            this.llPlay.Size = new System.Drawing.Size(205, 24);
+            this.llPlay.Size = new System.Drawing.Size(208, 27);
             this.llPlay.TabIndex = 4;
             this.llPlay.TabStop = true;
             this.llPlay.Text = "PLAY DDG BOARD >";
             this.llPlay.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llPlay_LinkClicked);
             // 
+            // dbconfig
+            // 
+            this.dbconfig.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dbconfig.AutoSize = true;
+            this.dbconfig.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dbconfig.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dbconfig.Location = new System.Drawing.Point(30, 263);
+            this.dbconfig.Name = "dbconfig";
+            this.dbconfig.Size = new System.Drawing.Size(156, 15);
+            this.dbconfig.TabIndex = 5;
+            this.dbconfig.TabStop = true;
+            this.dbconfig.Text = "DATABASE CONFIGURATION";
+            this.dbconfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.dbconfig_LinkClicked);
+            // 
             // Maintain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::VSBoard.Properties.Resources.desktop_github_com;
+            this.BackColor = System.Drawing.Color.Snow;
+            this.BackgroundImage = global::VSBoard.Properties.Resources.pattern;
             this.ClientSize = new System.Drawing.Size(889, 324);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "Maintain";
             this.Text = "Maintain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Maintain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -177,6 +194,7 @@
         private System.Windows.Forms.Button btnBanners;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.LinkLabel llPlay;
+        private System.Windows.Forms.LinkLabel dbconfig;
 
     }
 }

@@ -26,7 +26,23 @@ namespace VSBoard.Views
   
         public frmAnnouncements()
         {
-            InitializeComponent();
+            InitializeComponent();         
+        }
+        void setDelay()
+        {
+            String sql = "Select delay_announcements from tbl_meta_conf where id like 3";
+            cm = new SqlCommand(sql, cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+
+                timerForAnn.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+
+
+                //  i++;
+            }
+            dr.Close();
+
         }
 
         private void timerForAnn_Tick(object sender, EventArgs e)
@@ -41,25 +57,44 @@ namespace VSBoard.Views
             }
             else if (i == annlist.Count)
             {
-                // tableLayoutPanel1.Controls.Clear();
+                this.Dispose();
+                this.Close();
+                //tableLayoutPanel1.Controls.Clear();
                 //lblProjName.Text = "ALL LOADED";
             }
         }
 
         void getAnnouncements()
         {
-            String sql = "Select * from tbl_Announcements";
+            String sql = "Select a_content from tbl_Announcements where display_until >= CAST(CURRENT_TIMESTAMP AS DATETIME)";
             cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
 
-                annlist.AddLast(dr.GetValue(1).ToString());
+                annlist.AddLast(dr.GetValue(0).ToString());
 
 
 
             }
             dr.Close();
+        }
+
+        private void frmAnnouncements_Load(object sender, EventArgs e)
+        {
+            cn = new SqlConnection(connection.constring);
+            cn.Open();
+            setDelay();
+            getAnnouncements();
+            try
+            {
+                lblAnnouncement.Text = annlist.ElementAtOrDefault(0).ToString();
+            }
+            catch
+            {
+                this.Close();
+            }
+            i++;
         }
     }
 }

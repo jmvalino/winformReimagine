@@ -26,14 +26,12 @@ namespace VSBoard.Maintainance.Views
       
         public Meta()
         {
-            InitializeComponent();
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
-            
+            InitializeComponent();   
         }
 
         void saveMeta()
         {
+
             string sql = "update tbl_meta_conf set board_name = '" + txtBoardname.Text + "',board_desc = '" + txtBoarddesc.Text + "' where id like 3";
             cm = new SqlCommand(sql, cn);
             cm.ExecuteNonQuery();
@@ -71,7 +69,20 @@ namespace VSBoard.Maintainance.Views
 
         private void Meta_Load(object sender, EventArgs e)
         {
-            getMeta();
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+                getMeta();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                this.Dispose();
+                this.Close();
+
+            }
+          
         }
 
         private void txtBoardname_KeyPress(object sender, KeyPressEventArgs e)
@@ -81,7 +92,14 @@ namespace VSBoard.Maintainance.Views
 
         private void Meta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            saveMeta();
+            try
+            {
+                saveMeta();
+            }
+            catch (Exception ex)
+            {
+                this.Close();
+            }
         }
     }
 }
