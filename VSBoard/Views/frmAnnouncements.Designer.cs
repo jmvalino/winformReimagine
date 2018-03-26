@@ -44,7 +44,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.385696F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.6143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(59, 86);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(818, 246);
+            this.panel1.Size = new System.Drawing.Size(817, 246);
             this.panel1.TabIndex = 4;
             // 
             // lblAnnouncement
@@ -79,7 +79,7 @@
             this.lblAnnouncement.ForeColor = System.Drawing.Color.White;
             this.lblAnnouncement.Location = new System.Drawing.Point(0, 0);
             this.lblAnnouncement.Name = "lblAnnouncement";
-            this.lblAnnouncement.Size = new System.Drawing.Size(818, 246);
+            this.lblAnnouncement.Size = new System.Drawing.Size(817, 246);
             this.lblAnnouncement.TabIndex = 0;
             this.lblAnnouncement.Text = "ANNOUNCEMENTS";
             this.lblAnnouncement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,6 +112,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAnnouncements";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frmAnnouncements";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAnnouncements_Load);

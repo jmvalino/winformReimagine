@@ -160,11 +160,11 @@ namespace VSBoard.Views
             // chart1.Legends[0].LegendStyle = LegendStyle.Column;
             chart2.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             chart2.Legends[0].Alignment = StringAlignment.Center;
-            chart2.Legends[0].Title = "TASK";
+            //chart2.Legends[0].Title = "TASK";
             // chart1.Legends[0].BorderColor = Color.;
 
             //Add a new chart-series
-            string seriesname1 = "Monitor";
+            string seriesname1 = "Number Of Task";
             chart2.Series.Add(seriesname1);
             //set the chart-type to "Pie"
             chart2.Series[seriesname1].ChartType = SeriesChartType.Bar;

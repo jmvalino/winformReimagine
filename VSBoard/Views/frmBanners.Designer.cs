@@ -60,6 +60,8 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBanners";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frmBanners";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBanner)).EndInit();

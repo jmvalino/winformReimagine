@@ -36,7 +36,6 @@ C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Meta.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Maintainance.Views.Project.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Properties.Resources.resources
-C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.Announcements.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmAnnouncements.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmBanners.resources
 C:\Users\jmval\Documents\winformReimagine\VSBoard\obj\Debug\VSBoard.Views.frmManhours.resources

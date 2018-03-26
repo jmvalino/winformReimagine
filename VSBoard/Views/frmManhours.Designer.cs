@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManhours));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.listViewManhoursActive = new System.Windows.Forms.ListView();
             this.n = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Task = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.myImageList = new System.Windows.Forms.ImageList(this.components);
-            this.Ticker = new System.Windows.Forms.Timer(this.components);
             this.listViewManhoursInactive = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
+            this.Ticker = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -57,6 +57,17 @@
             this.panel1.Size = new System.Drawing.Size(795, 65);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(30, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "REALTIME MANHOURS";
             // 
             // tableLayoutPanel1
             // 
@@ -70,9 +81,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 65);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.015674F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.26019F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.41066F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.500613F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.83858F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.6608F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(795, 329);
             this.tableLayoutPanel1.TabIndex = 1;
@@ -80,7 +91,7 @@
             // 
             // listViewManhoursActive
             // 
-            this.listViewManhoursActive.BackColor = System.Drawing.Color.White;
+            this.listViewManhoursActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.listViewManhoursActive.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewManhoursActive.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.n,
@@ -89,9 +100,9 @@
             this.listViewManhoursActive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewManhoursActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewManhoursActive.LargeImageList = this.myImageList;
-            this.listViewManhoursActive.Location = new System.Drawing.Point(37, 18);
+            this.listViewManhoursActive.Location = new System.Drawing.Point(37, 16);
             this.listViewManhoursActive.Name = "listViewManhoursActive";
-            this.listViewManhoursActive.Size = new System.Drawing.Size(721, 128);
+            this.listViewManhoursActive.Size = new System.Drawing.Size(721, 160);
             this.listViewManhoursActive.SmallImageList = this.myImageList;
             this.listViewManhoursActive.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewManhoursActive.StateImageList = this.myImageList;
@@ -103,34 +114,25 @@
             // n
             // 
             this.n.Text = "Name";
-            this.n.Width = 216;
             // 
             // Task
             // 
             this.Task.Text = "Active Task";
-            this.Task.Width = 259;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Consumed Man Hours";
-            this.columnHeader2.Width = 377;
             // 
             // myImageList
             // 
             this.myImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("myImageList.ImageStream")));
             this.myImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.myImageList.Images.SetKeyName(0, "online.ico");
-            this.myImageList.Images.SetKeyName(1, "offline.ico");
-            // 
-            // Ticker
-            // 
-            this.Ticker.Enabled = true;
-            this.Ticker.Interval = 1000;
-            this.Ticker.Tick += new System.EventHandler(this.Ticker_Tick);
+            this.myImageList.Images.SetKeyName(0, "onlineICO.ico");
+            this.myImageList.Images.SetKeyName(1, "offlineICO.ico");
             // 
             // listViewManhoursInactive
             // 
-            this.listViewManhoursInactive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(194)))));
+            this.listViewManhoursInactive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(229)))));
             this.listViewManhoursInactive.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewManhoursInactive.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -139,9 +141,9 @@
             this.listViewManhoursInactive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewManhoursInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewManhoursInactive.LargeImageList = this.myImageList;
-            this.listViewManhoursInactive.Location = new System.Drawing.Point(37, 152);
+            this.listViewManhoursInactive.Location = new System.Drawing.Point(37, 182);
             this.listViewManhoursInactive.Name = "listViewManhoursInactive";
-            this.listViewManhoursInactive.Size = new System.Drawing.Size(721, 153);
+            this.listViewManhoursInactive.Size = new System.Drawing.Size(721, 122);
             this.listViewManhoursInactive.SmallImageList = this.myImageList;
             this.listViewManhoursInactive.TabIndex = 1;
             this.listViewManhoursInactive.TileSize = new System.Drawing.Size(400, 100);
@@ -160,27 +162,25 @@
             // 
             this.columnHeader4.Text = "Task";
             // 
-            // label1
+            // Ticker
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Realtime Manhours";
+            this.Ticker.Enabled = true;
+            this.Ticker.Interval = 1000;
+            this.Ticker.Tick += new System.EventHandler(this.Ticker_Tick);
             // 
             // frmManhours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 394);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManhours";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frmManhours";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);

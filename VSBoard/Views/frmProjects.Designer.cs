@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProjects));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel3c = new System.Windows.Forms.TableLayoutPanel();
             this.listViewMilestone = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableIcons = new System.Windows.Forms.ImageList(this.components);
             this.listViewAccomplished = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewDelayed = new System.Windows.Forms.ListView();
@@ -61,7 +62,6 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timerTicker = new System.Windows.Forms.Timer(this.components);
-            this.tableIcons = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel3c.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -116,6 +116,12 @@
             // 
             this.columnHeader6.Text = "Critical Milestones";
             this.columnHeader6.Width = 468;
+            // 
+            // tableIcons
+            // 
+            this.tableIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableIcons.ImageStream")));
+            this.tableIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.tableIcons.Images.SetKeyName(0, "milestone.png");
             // 
             // listViewAccomplished
             // 
@@ -185,29 +191,29 @@
             // 
             this.lblProjectTitle.BackColor = System.Drawing.Color.White;
             this.lblProjectTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblProjectTitle.Font = new System.Drawing.Font("OCR A Extended", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectTitle.Font = new System.Drawing.Font("MS Reference Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProjectTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
             this.lblProjectTitle.Location = new System.Drawing.Point(3, 0);
             this.lblProjectTitle.Name = "lblProjectTitle";
             this.lblProjectTitle.Size = new System.Drawing.Size(482, 77);
             this.lblProjectTitle.TabIndex = 0;
             this.lblProjectTitle.Text = "#ProjectName";
-            this.lblProjectTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblProjectTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblProjectTitle.Click += new System.EventHandler(this.lblProjectTitle_Click);
             // 
             // lblProjectStat
             // 
             this.lblProjectStat.AutoSize = true;
-            this.lblProjectStat.BackColor = System.Drawing.Color.OrangeRed;
+            this.lblProjectStat.BackColor = System.Drawing.Color.White;
             this.lblProjectStat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblProjectStat.Font = new System.Drawing.Font("OCR A Extended", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectStat.ForeColor = System.Drawing.Color.White;
+            this.lblProjectStat.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
             this.lblProjectStat.Location = new System.Drawing.Point(491, 0);
             this.lblProjectStat.Name = "lblProjectStat";
             this.lblProjectStat.Size = new System.Drawing.Size(442, 77);
             this.lblProjectStat.TabIndex = 1;
             this.lblProjectStat.Text = "#ProjectStat";
-            this.lblProjectStat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblProjectStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listViewOngoing
             // 
@@ -221,7 +227,7 @@
             this.columnHeader9});
             this.listViewOngoing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewOngoing.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewOngoing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
+            this.listViewOngoing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.listViewOngoing.GridLines = true;
             this.listViewOngoing.Location = new System.Drawing.Point(491, 80);
             this.listViewOngoing.Name = "listViewOngoing";
@@ -291,18 +297,18 @@
             // chart1
             // 
             this.chart1.BorderlineWidth = 0;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(224, 3);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(215, 221);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
@@ -314,18 +320,18 @@
             this.chart2.BorderlineColor = System.Drawing.Color.Black;
             this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
             this.chart2.BorderlineWidth = 0;
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(3, 3);
             this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart2.Series.Add(series4);
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(215, 221);
             this.chart2.TabIndex = 10;
             this.chart2.Text = "chart2";
@@ -335,12 +341,6 @@
             this.timerTicker.Enabled = true;
             this.timerTicker.Interval = 5000;
             this.timerTicker.Tick += new System.EventHandler(this.timerTicker_Tick);
-            // 
-            // tableIcons
-            // 
-            this.tableIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableIcons.ImageStream")));
-            this.tableIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.tableIcons.Images.SetKeyName(0, "milestone.png");
             // 
             // frmProjects
             // 
@@ -353,6 +353,8 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProjects";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "frmProjects";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmProjects_Load);

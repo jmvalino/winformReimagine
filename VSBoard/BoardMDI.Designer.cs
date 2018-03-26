@@ -54,7 +54,8 @@
             this.Controls.Add(this.lblSection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BoardMDI";
-            this.Text = "Board";
+            this.ShowIcon = false;
+            this.Text = "Board Playing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BoardMDI_FormClosing);
             this.Load += new System.EventHandler(this.BoardMDI_Load_1);

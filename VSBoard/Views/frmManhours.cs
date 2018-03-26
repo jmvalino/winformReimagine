@@ -15,6 +15,7 @@ namespace VSBoard.Views
 {
     public partial class frmManhours : Form
     {
+        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
 
         int i = 0;
         public SqlCommand cm = new SqlCommand();
@@ -28,13 +29,41 @@ namespace VSBoard.Views
         public frmManhours()
         {
             InitializeComponent();
+          
+            Opacity = 0;      //first the opacity is 0
+
+            t1.Interval = 50;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start(); 
             cn = new SqlConnection(connection.constring);
             cn.Open();
-
+            setDelay();
            activemanhours();
            inactivemanhours();
         }
+        void setDelay()
+        {
+            String sql = "Select delay_manhours from tbl_meta_conf where id like 3";
+            cm = new SqlCommand(sql, cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
 
+                Ticker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+
+
+                //  i++;
+            }
+            dr.Close();
+        }
+
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.05;
+        }
         void activemanhours()
         {
             String sql = "Select * from tbl_scheduledtask where Status = 'ON GOING'";
@@ -70,7 +99,7 @@ namespace VSBoard.Views
         }
         void inactivemanhours()
         {
-            String sql = "Select * from tbl_scheduledtask where Status like 'PAUSED'";
+            String sql = "Select * from tbl_scheduledtask where Status like 'PAUSED' LIMIT 3";
             cm = new SqlCommand(sql, cn);
             dr = cm.ExecuteReader();
             int i = 0;

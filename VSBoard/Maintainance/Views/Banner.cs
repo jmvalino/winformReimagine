@@ -64,10 +64,11 @@ namespace VSBoard.Maintainance.Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtImagePath.Text = (string)dataGridView1.Rows[e.RowIndex].Cells["OriginalPath"].Value;
-            button2.Enabled = true;
             try
             {
+            txtImagePath.Text = (string)dataGridView1.Rows[e.RowIndex].Cells["OriginalPath"].Value;
+            button2.Enabled = true;
+           
                 //Get image data from gridview column.
                 byte[] imageData = (byte[])dataGridView1.Rows[e.RowIndex].Cells["ImageData"].Value;
                 imageID = (int)dataGridView1.Rows[e.RowIndex].Cells["id"].Value;

@@ -81,8 +81,10 @@ namespace VSBoard.Views
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(10);
+            BoardMDI.varcontinue = false;
+           /// System.Environment.Exit(10);
             //this.ParentForm.Close();
+            this.Close();
            
         }
 
@@ -92,6 +94,39 @@ namespace VSBoard.Views
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            loadMeta();
+        }
+        void loadMeta()
+        {
+            try
+            {
+                String sql = "Select board_name,board_desc from tbl_meta_conf where id = 3 ";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    lblBoardName.Text = dr.GetValue(0).ToString();
+
+                  lblDesc.Text = dr.GetValue(1).ToString();
+                   
+
+                }
+                dr.Close();
+            }
+            catch(Exception ex){
+                MessageBox.Show("No Connection");
+
+            }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

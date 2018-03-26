@@ -12,30 +12,72 @@ namespace VSBoard
 {
     public partial class BoardMDI : Form
     {
-       
+        public static bool varcontinue =false;
         public BoardMDI()
         {
             InitializeComponent();
+            varcontinue = true;
            
         }
 
-        private void BoardMDI_Load(object sender, EventArgs e)
-        {
-            Views.Home hm = new Views.Home();
-            hm.ShowDialog();
-        }
+        //private void BoardMDI_Load(object sender, EventArgs e)
+        //{
+        //    Views.Home hm = new Views.Home();
+        //    hm.ShowDialog();
+        //}
 
         private void BoardMDI_Load_1(object sender, EventArgs e)
         {
+
+
+            while (varcontinue == true)
+            {
+               
+                if (varcontinue == true)
+                {
+                    showHome();
+                }
+                else
+                {
+                    this.Close();
+                }
+                if (varcontinue == true)
+                {
+                    showProjects();
+                }
+                else
+                {
+                    this.Close();
+                }
+                if (varcontinue == true)
+                {
+                    showManhours();
+                }
+                else
+                {
+                    this.Close();
+                }
+                if (varcontinue == true)
+                {
+                    showAnnouncements();
+                }
+                else
+                {
+                    this.Close();
+                }
+                if (varcontinue == true)
+                {
+                    showBanners();
+                }
+                else
+                {
+                    this.Close();
+                }
+           
             
                 
-                showHome();
-                showProjects();
-                showManhours();
-                showAnnouncements();
-                showBanners();
-
-                BoardMDI_Load_1(sender, e);
+            }
+                
             
         }
 

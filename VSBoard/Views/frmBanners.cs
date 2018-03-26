@@ -14,7 +14,7 @@ namespace VSBoard.Views
 {
     public partial class frmBanners : Form
     {
-
+        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
        // byte[] ImagemByte;
         LinkedList<byte[]> projlist = new LinkedList<byte[]>();
         int i = 0;
@@ -29,10 +29,18 @@ namespace VSBoard.Views
         public ListViewItem list1 = new ListViewItem();
 
 
-        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+   
         public frmBanners()
         {
             InitializeComponent();
+
+            Opacity = 0;      //first the opacity is 0
+
+            t1.Interval = 50;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start(); 
+
+
             cn = new SqlConnection(connection.constring);
             cn.Open();
             setDelay();
@@ -43,6 +51,37 @@ namespace VSBoard.Views
             t1.Interval = 50;   //we'll increase the opacity every 10ms
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
             t1.Start(); 
+        }
+        private const int WM_HSCROLL = 0x114;
+        private const int WM_VSCROLL = 0x115;
+
+        protected override void WndProc(ref Message m)
+        {
+            if ((m.Msg == WM_HSCROLL || m.Msg == WM_VSCROLL)
+            && (((int)m.WParam & 0xFFFF) == 5))
+            {
+                // Change SB_THUMBTRACK to SB_THUMBPOSITION
+                m.WParam = (IntPtr)(((int)m.WParam & ~0xFFFF) | 4);
+            }
+            base.WndProc(ref m);
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;    // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.05;
         }
         void setDelay()
         {
@@ -60,13 +99,7 @@ namespace VSBoard.Views
             dr.Close();
 
         }
-        void fadeIn(object sender, EventArgs e)
-        {
-            if (Opacity >= 1)
-                t1.Stop();   //this stops the timer if the form is completely displayed
-            else
-                Opacity += 0.05;
-        }
+    
         void getBanners()
         {
             String sql = "Select * from tbl_banners";

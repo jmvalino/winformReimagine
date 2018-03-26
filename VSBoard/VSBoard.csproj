@@ -150,12 +150,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Announcements.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\Announcements.Designer.cs">
-      <DependentUpon>Announcements.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmAnnouncements.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,9 +211,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Announcements.resx">
-      <DependentUpon>Announcements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmAnnouncements.resx">
       <DependentUpon>frmAnnouncements.cs</DependentUpon>
