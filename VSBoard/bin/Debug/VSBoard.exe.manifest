@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="VSBoard.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="VSBoard.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="board.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -55,17 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSBoard.exe" size="707496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSBoard.exe" size="6869928">
       <assemblyIdentity name="VSBoard" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+Qz9eDsnwD9P20LNSKDtI8IBTWqRsTtZhN7r4luiYa0=</dsig:DigestValue>
+        <dsig:DigestValue>bNnhPkgX1CkF6ZMDYKV/jbTanRM6fVmF/ghDqYAcn9c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Assets\calendar-text.png" size="833">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fPxRU8wolxsd7c4ZJFRqR9LqeyJ0zKvRzNF9Bkut87c=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Assets\circuit-board.png" size="34561">
     <hash>
       <dsig:Transforms>
@@ -75,6 +84,15 @@
       <dsig:DigestValue>KIQzP0YwGqi9D4fEJLRuxpmUWRg+ELbsTVZvde1AsJI=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Assets\clock.png" size="1808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l9gROWf1REcrs9qa7Ksq9cVlq/wRwJKKMTiUZaLiHeI=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Assets\cube-outline.png" size="1094">
     <hash>
       <dsig:Transforms>
@@ -82,6 +100,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>tBcKaf1mgpaptaTGJC08/SHPgHAeULkWt35Zq4Az/pk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\database-plus.png" size="1615">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Ni1TyFTaNyLrV6dAwoms9t91n2OOP+46BLC4w71QE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Assets\desktop_github_com.png" size="46748">
@@ -127,6 +154,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>FwS7dgSA1Z6fJO3+/ZoXMJMkhuWo5SARDDasmM3/ul4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\manh.png" size="1147">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Cd7qBHmOk8cWxJCX4uKmNLjXPDiQXE2DOjKT0oMRTGo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Assets\message.png" size="571">
@@ -210,13 +246,13 @@
       <dsig:DigestValue>CIlO5j+S1VPaAPzfW/mc7T4jfY5LRHKKyQclLMPDHeY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VSBoard.exe.config" size="1041">
+  <file name="VSBoard.exe.config" size="1018">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CYlHDl6A0vo6G1jFkcU3KSxRDH9Six3TOcm/TpDCPvY=</dsig:DigestValue>
+      <dsig:DigestValue>oIO5Mb+4ceHYDBPRRpVNbDLLD1MJQ/qoCBHfU2lrZmY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

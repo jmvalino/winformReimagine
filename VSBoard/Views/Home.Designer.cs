@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Ticker = new System.Windows.Forms.Timer(this.components);
-            this.lblBoardName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.lblBoardName = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -47,28 +47,16 @@
             this.Ticker.Interval = 1000;
             this.Ticker.Tick += new System.EventHandler(this.Ticker_Tick);
             // 
-            // lblBoardName
-            // 
-            this.lblBoardName.AutoSize = true;
-            this.lblBoardName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblBoardName.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBoardName.ForeColor = System.Drawing.Color.White;
-            this.lblBoardName.Location = new System.Drawing.Point(3, 0);
-            this.lblBoardName.Name = "lblBoardName";
-            this.lblBoardName.Size = new System.Drawing.Size(534, 54);
-            this.lblBoardName.TabIndex = 1;
-            this.lblBoardName.Text = "Design && Development Group";
-            this.lblBoardName.Click += new System.EventHandler(this.label4_Click);
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
-            this.panel1.BackgroundImage = global::VSBoard.Properties.Resources.pattern;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::VSBoard.Properties.Resources.ip;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 600);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 94);
+            this.panel1.Size = new System.Drawing.Size(930, 96);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -84,7 +72,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.12069F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(930, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(930, 96);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -100,30 +88,43 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.44578F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.55422F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(540, 88);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(540, 90);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // lblDesc
             // 
             this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDesc.Location = new System.Drawing.Point(239, 57);
+            this.lblDesc.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc.Location = new System.Drawing.Point(237, 56);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(61, 28);
+            this.lblDesc.Size = new System.Drawing.Size(66, 33);
             this.lblDesc.TabIndex = 3;
             this.lblDesc.Text = "DDG";
+            // 
+            // lblBoardName
+            // 
+            this.lblBoardName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBoardName.AutoSize = true;
+            this.lblBoardName.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBoardName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(143)))), ((int)(((byte)(254)))));
+            this.lblBoardName.Location = new System.Drawing.Point(21, 0);
+            this.lblBoardName.Name = "lblBoardName";
+            this.lblBoardName.Size = new System.Drawing.Size(497, 55);
+            this.lblBoardName.TabIndex = 1;
+            this.lblBoardName.Text = "Design && Development Group";
+            this.lblBoardName.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold);
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(662, 0);
+            this.lblTime.Font = new System.Drawing.Font("Microsoft MHei", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(143)))), ((int)(((byte)(254)))));
+            this.lblTime.Location = new System.Drawing.Point(665, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(265, 94);
+            this.lblTime.Size = new System.Drawing.Size(262, 96);
             this.lblTime.TabIndex = 2;
             this.lblTime.Text = "#DDG";
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
@@ -133,9 +134,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::VSBoard.Properties.Resources.desktop_github_com;
+            this.BackgroundImage = global::VSBoard.Properties.Resources.internet_of_things_graphic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(930, 696);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.ShowIcon = false;

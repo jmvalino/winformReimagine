@@ -44,29 +44,43 @@ namespace VSBoard.Views
 
             Opacity = 0;      //first the opacity is 0
 
-            t1.Interval = 50;  //we'll increase the opacity every 10ms
+            t1.Interval = 70;  //we'll increase the opacity every 10ms
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
-            t1.Start(); 
-
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
+            t1.Start();
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                this.Close();
+            }
             
             /// pie chart creation ///
         }
         void setDelay()
         {
-            String sql = "Select delay_projects from tbl_meta_conf where id like 3";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select delay_projects from tbl_meta_conf where id like 3";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                timerTicker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+                    timerTicker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
 
 
-                //  i++;
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
            
         }
 
@@ -82,22 +96,34 @@ namespace VSBoard.Views
             listViewOngoing.Items.Clear();
             listViewMilestone.Items.Clear();
             listViewDelayed.Items.Clear();
+            listViewUpcoming.Items.Clear();
 
             string pname = "";
             ///////////////QUERY TO SELECT PROJECT////////////////////
-            String sql = "Select status,name from tbl_projects where id like " + projid + " ";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-              
-                lblProjectStat.Text =  dr.GetValue(0).ToString();
-               
-                lblProjectTitle.Text = dr.GetValue(1).ToString();
-                pname = dr.GetValue(1).ToString();
+                String sql = "Select status,name,owner from tbl_projects where id like " + projid + " ";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
+                   // lblProjectStat.Text = dr.GetValue(0).ToString();
+
+                    lblProjname.Text = "     Projects / " +dr.GetValue(1).ToString() ; 
+                   // lblProjname.Dock = DockStyle.Fill;
+                   // lblProjectTitle.Text = dr.GetValue(1).ToString();
+                    //lblAccountOwner.Text = dr.GetValue(2).ToString();
+                    //lblAccountOwner.Dock = DockStyle.Right;
+                    pname = dr.GetValue(1).ToString();
+
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
             //listViewDeliverables.Items.Clear();
             listViewOngoing.Items.Clear();
            // deliverables(pname);
@@ -113,23 +139,37 @@ namespace VSBoard.Views
             int con = 0;
             int rem = 0;
  //////////////////////////////////////////////////////////////////Total MAN HOURS///////////////////////////////////////////////
-            sql = "Select manhour from tbl_projects where id = " + projid + " ";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                mh = dr.GetInt32(0);
+                String sql = "Select manhour from tbl_projects where id = " + projid + " ";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    mh = dr.GetInt32(0);
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
 //////////////////////////////////////////////////////////////////Total task hours///////////////////////////////////////////////
-            sql = "Select Manhours from tbl_scheduledtask where Project = '" +pname+ "' ";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-               con += dr.GetInt32(0);
+                String sql = "Select Manhours from tbl_scheduledtask where Project = '" + pname + "' ";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    con += dr.GetInt32(0);
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
 
             chart1.Series.Clear();
             chart1.Legends.Clear();
@@ -197,26 +237,33 @@ namespace VSBoard.Views
 
         void OngoingTasks(String project)
         {
-            ongoing = 0;
-            String sql = "Select * from tbl_scheduledtask where Project  = '"+project+"' and Status = 'ON GOING'";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                ongoing++;
-                DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
-                DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
+                ongoing = 0;
+                String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'ON GOING'";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    ongoing++;
+                    DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
+                    DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
 
 
-                listOngoing = listViewOngoing.Items.Add(dr.GetValue(1).ToString());
-                listOngoing.SubItems.Add(dr.GetValue(9).ToString());
-                listOngoing.SubItems.Add(startdate.ToString("dd-MMM"));
-                listOngoing.SubItems.Add(duedate.ToString("dd-MMM"));
-                listOngoing.SubItems.Add(dr.GetValue(8).ToString());
+                    listOngoing = listViewOngoing.Items.Add(dr.GetValue(1).ToString());
+                    listOngoing.SubItems.Add(dr.GetValue(9).ToString());
+                    listOngoing.SubItems.Add(startdate.ToString("dd-MMM"));
+                    listOngoing.SubItems.Add(duedate.ToString("dd-MMM"));
+                    listOngoing.SubItems.Add(dr.GetValue(8).ToString());
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
             listViewOngoing.Columns[0].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
             listViewOngoing.Columns[1].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
             listViewOngoing.Columns[2].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -226,26 +273,33 @@ namespace VSBoard.Views
 
         void DelayedTasks(String project)
         {
-            delayed = 0;
-            String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'DELAYED'";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                delayed++;
-                DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
-                DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
+                delayed = 0;
+                String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'DELAYED'";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    delayed++;
+                    DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
+                    DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
 
 
-                listDelayed = listViewDelayed.Items.Add(dr.GetValue(1).ToString());
-                listDelayed.SubItems.Add(dr.GetValue(9).ToString());
-                listDelayed.SubItems.Add(startdate.ToString("dd-MMM"));
-                listDelayed.SubItems.Add(duedate.ToString("dd-MMM"));
-                listDelayed.SubItems.Add(dr.GetValue(8).ToString());
+                    listDelayed = listViewDelayed.Items.Add(dr.GetValue(1).ToString());
+                    listDelayed.SubItems.Add(dr.GetValue(9).ToString());
+                    listDelayed.SubItems.Add(startdate.ToString("dd-MMM"));
+                    listDelayed.SubItems.Add(duedate.ToString("dd-MMM"));
+                    listDelayed.SubItems.Add(dr.GetValue(8).ToString());
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
      
             listViewDelayed.Columns[0].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
             listViewDelayed.Columns[1].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -256,68 +310,85 @@ namespace VSBoard.Views
 
         void UpcomingTasks(String project)
         {
-            String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'DELAYED'";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
-                DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
+                String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Date_Start > getdate()";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
+                    DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
 
 
-                listUpcoming = listViewUpcoming.Items.Add(dr.GetValue(1).ToString());
-                listUpcoming.SubItems.Add(dr.GetValue(9).ToString());
-                listUpcoming.SubItems.Add(startdate.ToString("dd-MMM"));
-                listUpcoming.SubItems.Add(duedate.ToString("dd-MMM"));
-                listUpcoming.SubItems.Add(dr.GetValue(8).ToString());
+                    listUpcoming = listViewUpcoming.Items.Add(dr.GetValue(1).ToString() +" on " + startdate.ToString("dd-MMM"));
+                    
 
-
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         void AccomplishedTasks(String project)
         {
             done=0;
-            String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'DONE'";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                done++;
-                DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
-                DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
+                String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Status = 'DONE'";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    done++;
+                    DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
+                    DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
 
 
-                listAccomplished = listViewAccomplished.Items.Add(dr.GetValue(1).ToString());
-                listAccomplished.SubItems.Add(dr.GetValue(9).ToString());
-                listAccomplished.SubItems.Add(startdate.ToString("dd-MMM"));
-                listAccomplished.SubItems.Add(duedate.ToString("dd-MMM"));
-                listAccomplished.SubItems.Add(dr.GetValue(8).ToString());
+                    listAccomplished = listViewAccomplished.Items.Add(dr.GetValue(1).ToString());
+                    listAccomplished.SubItems.Add(dr.GetValue(9).ToString());
+                    listAccomplished.SubItems.Add(startdate.ToString("dd-MMM"));
+                    listAccomplished.SubItems.Add(duedate.ToString("dd-MMM"));
+                    listAccomplished.SubItems.Add(dr.GetValue(8).ToString());
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
         }
         void MilestoneTasks(String project)
         {
-            String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Importance = 'HIGH'";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
-                DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
+                String sql = "Select * from tbl_scheduledtask where Project  = '" + project + "' and Importance = 'HIGH'";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    DateTime startdate = DateTime.Parse(dr.GetValue(3).ToString());
+                    DateTime duedate = DateTime.Parse(dr.GetValue(4).ToString());
 
 
-                listMilestone = listViewMilestone.Items.Add(dr.GetValue(1).ToString());
-                listMilestone.SubItems.Add(dr.GetValue(9).ToString());
-                listMilestone.SubItems.Add(startdate.ToString("dd-MMM"));
-                listMilestone.SubItems.Add(duedate.ToString("dd-MMM"));
-                listMilestone.SubItems.Add(dr.GetValue(8).ToString());
+                    listMilestone = listViewMilestone.Items.Add(dr.GetValue(1).ToString());
+                    listMilestone.SubItems.Add(dr.GetValue(9).ToString());
+                    listMilestone.SubItems.Add(startdate.ToString("dd-MMM"));
+                    listMilestone.SubItems.Add(duedate.ToString("dd-MMM"));
+                    listMilestone.SubItems.Add(dr.GetValue(8).ToString());
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
         }
 
 
@@ -347,18 +418,25 @@ namespace VSBoard.Views
 
         void getProjects()
         {
-            String sql = "Select id from tbl_projects";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select id from tbl_projects";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                projlist.AddLast(dr.GetValue(0).ToString());
+                    projlist.AddLast(dr.GetValue(0).ToString());
 
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
 
         }
 

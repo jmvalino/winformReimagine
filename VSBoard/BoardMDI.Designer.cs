@@ -35,11 +35,12 @@
             // 
             this.lblSection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSection.AutoSize = true;
-            this.lblSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSection.ForeColor = System.Drawing.Color.White;
-            this.lblSection.Location = new System.Drawing.Point(313, 161);
+            this.lblSection.BackColor = System.Drawing.Color.Transparent;
+            this.lblSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSection.Location = new System.Drawing.Point(599, 292);
             this.lblSection.Name = "lblSection";
-            this.lblSection.Size = new System.Drawing.Size(315, 108);
+            this.lblSection.Size = new System.Drawing.Size(214, 73);
             this.lblSection.TabIndex = 0;
             this.lblSection.Text = "#DDG";
             this.lblSection.Click += new System.EventHandler(this.lblSection_Click);
@@ -48,10 +49,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(107)))), ((int)(((byte)(247)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::VSBoard.Properties.Resources.internet_of_things_graphic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(872, 363);
             this.Controls.Add(this.lblSection);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BoardMDI";
             this.ShowIcon = false;

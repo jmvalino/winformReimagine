@@ -13,6 +13,9 @@ namespace VSBoard.Views
 {
     public partial class frmAnnouncements : Form
     {
+        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+        int delay = 0;
+
         LinkedList<String> annlist = new LinkedList<String>();
         int i = 0;
         //Task wait = Task.Delay(5000);
@@ -26,23 +29,42 @@ namespace VSBoard.Views
   
         public frmAnnouncements()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            Opacity = 0;      //first the opacity is 0
+
+            t1.Interval = 70;   //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start(); 
         }
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.05;
+        }
+
         void setDelay()
         {
-            String sql = "Select delay_announcements from tbl_meta_conf where id like 3";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select delay_announcements from tbl_meta_conf where id = 3";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                timerForAnn.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+                    timerForAnn.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
 
 
-                //  i++;
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
         }
 
         private void timerForAnn_Tick(object sender, EventArgs e)
@@ -66,34 +88,44 @@ namespace VSBoard.Views
 
         void getAnnouncements()
         {
-            String sql = "Select a_content from tbl_Announcements where display_until >= CAST(CURRENT_TIMESTAMP AS DATETIME)";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select a_content from tbl_Announcements where display_until > getdate()";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                annlist.AddLast(dr.GetValue(0).ToString());
+                    annlist.AddLast(dr.GetValue(0).ToString());
 
 
 
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch(Exception ex){
+                MessageBox.Show("DB Error");
+            }
         }
 
         private void frmAnnouncements_Load(object sender, EventArgs e)
         {
+            try
+            {
             cn = new SqlConnection(connection.constring);
             cn.Open();
             setDelay();
             getAnnouncements();
-            try
-            {
+
+           
                 lblAnnouncement.Text = annlist.ElementAtOrDefault(0).ToString();
             }
-            catch
+
+            catch(Exception ex)
             {
                 this.Close();
             }
+          
             i++;
         }
     }

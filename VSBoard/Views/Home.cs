@@ -25,30 +25,47 @@ namespace VSBoard.Views
         public Home()
         {
             InitializeComponent();
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                BoardMDI.varcontinue = false;
+            }
             setDelay();
             lblTime.Text = DateTime.Now.ToLocalTime().ToShortTimeString();
             Opacity = 0;      //first the opacity is 0
 
-            t1.Interval = 50;   //we'll increase the opacity every 10ms
+            t1.Interval = 70;   //we'll increase the opacity every 10ms
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
             t1.Start(); 
         }
         void setDelay()
         {
-            String sql = "Select delay_home from tbl_meta_conf where id like 3";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
 
-              delay = Convert.ToInt32(dr.GetValue(0));
-               
+                String sql = "Select delay_home from tbl_meta_conf where id like 3";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                //  i++;
+                    delay = Convert.ToInt32(dr.GetValue(0));
+
+
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                BoardMDI.varcontinue = false;
+            }
         }
         void fadeIn(object sender, EventArgs e)
         {
@@ -120,9 +137,10 @@ namespace VSBoard.Views
                 }
                 dr.Close();
             }
-            catch(Exception ex){
-                MessageBox.Show("No Connection");
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                BoardMDI.varcontinue = false;
             }
         }
 

@@ -29,12 +29,22 @@ namespace VSBoard.Maintainance.Views
         public Banner()
         {
             InitializeComponent();
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
+            
         }
 
         private void Banner_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+                return;
+                this.Close();
+            }
             GetImagesFromDatabase();
         }
         void GetImagesFromDatabase()
@@ -56,9 +66,11 @@ namespace VSBoard.Maintainance.Views
                 //Fill Grid with dataset.
                 dataGridView1.DataSource = DS.Tables["ImagesStore"];
             }
+         
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("DB Error");
+                this.Close();
             }
         }
 

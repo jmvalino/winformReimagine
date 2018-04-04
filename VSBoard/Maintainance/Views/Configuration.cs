@@ -28,8 +28,16 @@ namespace VSBoard.Maintainance.Views
         public Configuration()
         {
             InitializeComponent();
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error" +ex);
+                return;
+            }
         }
 
         private void Configuration_Load(object sender, EventArgs e)
@@ -39,31 +47,47 @@ namespace VSBoard.Maintainance.Views
 
         void setDelay()
         {
-            string sql = "update tbl_meta_conf set delay_home = '" + numericUpDownHome.Value + "',delay_projects = '" + numericUpDownProject.Value + "',delay_manhours = '" + numericUpDownManhours.Value + "',delay_banners = '" + numericUpDownBanner.Value + "',delay_announcements = '" + numericUpDownAnnouncements.Value + "' where id = 3";
-            cm = new SqlCommand(sql, cn);
-            cm.ExecuteNonQuery();
+            try
+            {
+                string sql = "update tbl_meta_conf set delay_home = '" + numericUpDownHome.Value + "',delay_projects = '" + numericUpDownProject.Value + "',delay_manhours = '" + numericUpDownManhours.Value + "',delay_banners = '" + numericUpDownBanner.Value + "',delay_announcements = '" + numericUpDownAnnouncements.Value + "' where id = 3";
+                cm = new SqlCommand(sql, cn);
+                cm.ExecuteNonQuery();
 
-            cm.Dispose();
+                cm.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error" +ex);
+                return;
+            }
         }
 
         void getDelay()
         {
-            String sql = "Select delay_home,delay_projects,delay_manhours,delay_banners,delay_announcements from tbl_meta_conf where id like 3";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select delay_home,delay_projects,delay_manhours,delay_banners,delay_announcements from tbl_meta_conf where id like 3";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                numericUpDownHome.Value = Convert.ToInt32(dr.GetValue(0));
-                numericUpDownProject.Value =  Convert.ToInt32(dr.GetValue(1));
-                numericUpDownManhours.Value = Convert.ToInt32(dr.GetValue(2));
-                numericUpDownBanner.Value =  Convert.ToInt32(dr.GetValue(3));
-                numericUpDownAnnouncements.Value = Convert.ToInt32(dr.GetValue(4));
+                    numericUpDownHome.Value = Convert.ToInt32(dr.GetValue(0));
+                    numericUpDownProject.Value = Convert.ToInt32(dr.GetValue(1));
+                    numericUpDownManhours.Value = Convert.ToInt32(dr.GetValue(2));
+                    numericUpDownBanner.Value = Convert.ToInt32(dr.GetValue(3));
+                    numericUpDownAnnouncements.Value = Convert.ToInt32(dr.GetValue(4));
 
 
-                //  i++;
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error" +ex);
+                return;
+            }
         }
 
         private void Configuration_FormClosing(object sender, FormClosingEventArgs e)

@@ -36,13 +36,19 @@ namespace VSBoard.Views
 
             Opacity = 0;      //first the opacity is 0
 
-            t1.Interval = 50;  //we'll increase the opacity every 10ms
+            t1.Interval = 70;  //we'll increase the opacity every 10ms
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
-            t1.Start(); 
+            t1.Start();
 
-
-            cn = new SqlConnection(connection.constring);
-            cn.Open();
+            try
+            {
+                cn = new SqlConnection(connection.constring);
+                cn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
             setDelay();
             getBanners();
             loadBanner();
@@ -81,41 +87,54 @@ namespace VSBoard.Views
             if (Opacity >= 1)
                 t1.Stop();   //this stops the timer if the form is completely displayed
             else
-                Opacity += 0.05;
+                Opacity += 0.01;
         }
         void setDelay()
         {
-            String sql = "Select delay_banners from tbl_meta_conf where id like 3";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select delay_banners from tbl_meta_conf where id like 3";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                Ticker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
+                    Ticker.Interval = Convert.ToInt32(dr.GetValue(0)) * 1000;
 
 
-                //  i++;
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
 
         }
     
         void getBanners()
         {
-            String sql = "Select * from tbl_banners";
-            cm = new SqlCommand(sql, cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
+                String sql = "Select * from tbl_banners";
+                cm = new SqlCommand(sql, cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
 
-                projlist.AddLast((byte[])dr.GetValue(2));
-               // ImagemByte = (byte[])dr.GetValue(1);
+                    projlist.AddLast((byte[])dr.GetValue(2));
+                    // ImagemByte = (byte[])dr.GetValue(1);
 
 
-             //  i++;
+                    //  i++;
+                }
+                dr.Close();
             }
-            dr.Close();
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error");
+            }
         }
 
         private void Ticker_Tick(object sender, EventArgs e)
